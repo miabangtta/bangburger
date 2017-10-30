@@ -1,0 +1,138 @@
+.hero {
+  background-image: url('../img/bg/video-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.hero__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  padding-bottom: 15%;
+}
+
+.hero__logo {
+  margin-right: auto;
+}
+
+.nav {
+  margin-right: rem(15px);
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  &:after {
+    display: inline-flex;
+    align-items: center;
+    content: ' ';
+    @include circle(5px, #fff);
+    margin: 0 12px;
+  }
+  &:last-child:after {
+    display: none;
+  }
+}
+
+.nav__item--link {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.42;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  transition: .5s;
+  &:hover {
+    text-decoration: underline;
+  }
+  }
+
+.header__button {
+  width: 97px;
+  height: 35px;
+  background-color: #e45028;
+  border: 0;
+  padding: 0;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  &:hover {
+    background-color: #c1401e;
+  }
+}
+
+.header__button--link {
+  font-size: 13px;
+  line-height: 35px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero__intro {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.hero__image, .hero__title {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.hero__title {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section__title {
+  color: #f9b43b;
+  font-family: "gagalin";
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.42;
+  margin: 0;
+  padding-top: 60px;
+}
+
+.intro__burgers {
+  color: #fff;
+  font-family: "lifehack";
+  font-size: 65px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.arrow-scroll {
+  position: absolute;
+  height: 15px;
+  width: 30px;
+  bottom: 30px;
+  left: 50%;
+}

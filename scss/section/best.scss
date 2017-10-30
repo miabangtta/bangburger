@@ -1,0 +1,38 @@
+.best {
+  background-image: url('../img/bg/best.jpg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__title--best {
+  color: #2f3234;
+  padding: 0;
+  margin-bottom: rem(60px);
+}
+
+.best__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.best__item {
+  justify-content: center;
+  -webkit-justify-content: center;
+  text-align: center;
+}
+
+.best__item-head {
+  font-size: 24px;
+  font-family: "lifehack", Arial, sans-serif;
+  line-height: 1.42;
+}
+
+.best__item-content {
+  font-size: 14px;
+  color: #2f3234;
+  font-family: "ubuntulight", arial, sans-serif;
+}
