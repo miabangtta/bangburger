@@ -1,0 +1,27 @@
+.team {
+  background-image: url(../img/bg/team-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.team__content {
+  position: absolute;
+  height: 100%;
+  width: 40%;
+}
+
+.team__bg {
+  background-color: $dark;
+  height: 100%;
+  opacity: .8;
+}
+
+.team__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,14 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer__contacts, .footer__socials {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 50%;
+}
+
+.socials__list {
+  text-align: right;
+}
