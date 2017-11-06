@@ -23,3 +23,11 @@
 .socials__list {
   text-align: right;
 }
+
+.socials__icon {
+  fill: $dark;
+}
+
+.socials__icon:hover {
+  fill: #fff;
+}
