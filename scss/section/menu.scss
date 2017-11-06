@@ -1,9 +1,84 @@
 .menu {
-  background-image: url(../img/bg/menu.jpg);
-  background-repeat: no-repeat;
+  background: url(../img/bg/menu.jpg) center center no-repeat;
   background-size: cover;
 }
 
-.menu__title {
-  color: #fff;
+.menu__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-acco {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+}
+
+.menu-acco__item {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+  transition: .6s;
+  width: 80px;
+}
+
+.menu-acco__content {
+  width: 100%;
+  background-color: rgba($dark, .6);
+  display: flex;
+  z-index: 2;
+  align-items: flex-start;
+}
+
+.menu-acco__title {
+  width: 80px;
+  height: 100%;
+}
+
+.menu-acco__title-text {
+  left: -105px;
+  top: 50%;
+  height: 80px;
+  white-space: nowrap;
+   font-family: "gagalin";
+   font-size: 40px;
+   font-weight: 400;
+   text-align: center;
+   color: #fff;
+   text-decoration: none;
+   transform: rotate(-90deg);
+   position: absolute;
+
+
+}
+ // {
+//   font-family: "gagalin";
+//   font-size: 40px;
+//   font-weight: 400;
+//   text-align: center;
+//   color: #fff;
+//   text-decoration: none;
+//   transform: rotate(-90deg) translate(-50%, -50%);
+//   position: absolute;
+//   height: 80px;
+//   top: 20%;
+//   left: -50px;
+//   margin: 0;
+//   white-space: nowrap;
+// }
+
+
+.menu-acco__text {
+  height: 100%;
+  font-family: "ubuntulight";
+  // position: absolute;
+  z-index: 2;
 }

@@ -1,0 +1,135 @@
+.order {
+  background: url('../img/bg/form-bg.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.form__elem {
+  display: flex;
+  flex-direction: row;
+}
+
+.form__content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 15px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form__row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.form__block {
+  flex: 1;
+  margin-right: 20px;
+  &:last-child  {
+    margin-right: 0;
+  }
+}
+
+.form__block-title {
+  color: #fff;
+  font-family: "ubuntulight";
+}
+
+.form__input, .form__teatarea {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  &:focus {
+    outline: none;
+    border-color: $yellow;
+  }
+}
+
+.form__teatarea {
+  resize: none;
+  height: 100px;
+}
+
+.form__input-circle {
+  @include circle(10px, #fff);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.form__input-inner {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: $orange;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .2s;
+}
+
+.form__input-square {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.form__input-check {
+  width: 0px;
+  height: 0px;
+  background-color: $orange;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .2s;
+}
+
+.form__input-radio, .form__input-checkbox {
+  left: -9999px;
+  position: absolute;
+}
+
+.form__input-radio:checked + .form__input-circle .form__input-inner {
+  width: 5px;
+  height: 5px;
+}
+
+.form__input-checkbox:checked + .form__input-square .form__input-check {
+  width: 5px;
+  height: 5px;
+}
+
+.form__btn {
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 35px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  cursor: pointer;
+  &_submit {
+    background-color: #e45028;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #c1401e;
+    }
+  }
+
+  &_reset {
+    background-color: $dark;
+    &:hover {
+      background-color: #000;
+    }
+  }
+}

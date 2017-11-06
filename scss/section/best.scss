@@ -8,12 +8,6 @@
   align-items: center;
 }
 
-.section__title--best {
-  color: #2f3234;
-  padding: 0;
-  margin-bottom: rem(60px);
-}
-
 .best__list {
   display: flex;
   flex-direction: row;
@@ -21,17 +15,21 @@
 
 .best__item {
   justify-content: center;
-  -webkit-justify-content: center;
   text-align: center;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-.best__item-head {
+.best__head {
   font-size: 24px;
   font-family: "lifehack", Arial, sans-serif;
   line-height: 1.42;
 }
 
-.best__item-content {
+.best__text {
   font-size: 14px;
   color: #2f3234;
   font-family: "ubuntulight", arial, sans-serif;

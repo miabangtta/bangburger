@@ -1,0 +1,16 @@
+.pagination {
+  top: 100px;
+  right: 30px;
+  position: fixed;
+}
+
+.pag__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.pag__item {
+  margin-bottom: 20px;
+  content: " ";
+  @include circle (8px, #fff);
+}

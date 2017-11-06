@@ -22,8 +22,12 @@
 .section {
   height: 100%;
   background-color: rgba(0,0,0,0.31);
-  min-width: 940px;
+  min-width: 100vh;
   min-height: 650px;
+}
+
+.section_centered {
+  align-items: center;
 }
 
 .header__button-link {

@@ -1,12 +1,23 @@
 .footer {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  background-image: url("../img/content/footer-bg.jpg");
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 50%;
+  overflow: hidden;
 }
 
 .footer__contacts, .footer__socials {
-  display: flex;
-  justify-content: space-between;
-  flex-basis: 50%;
+  color: #fff;
+  margin: 5px 80px;
+}
+
+.footer__phone-text {
+  color: $orange;
+  text-decoration: none;
 }
 
 .socials__list {

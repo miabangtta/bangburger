@@ -5,23 +5,64 @@
   position: relative;
 }
 
-.team__content {
+.team__container {
   position: absolute;
-  height: 100%;
-  width: 40%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background-color: rgba($dark, .93);
+  color:  #fff;
+  padding-left: 70px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  justify-content: flex-start;
 }
 
-.team__bg {
-  background-color: $dark;
-  height: 100%;
-  opacity: .8;
+.team-acco__trigger {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'gagalin';
+  display: flex;
+  align-items: center;
+
+  &:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border: 9px solid transparent;
+  border-top-color: $yellow;
+  border-bottom-width: 0px;
+  }
 }
 
-.team__avatar {
+.team-acco__content {
+  display: none;
+  font-family: "ubuntulight";
+}
+
+.team-acco__avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  overflow: hidden;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.team-acco__item_active {
+  .team-acco__trigger {
+    color: $yellow;
+    &:before {
+      transform: rotate(-180deg);
+      }
+    }
+
+    .team-acco__content {
+      display: flex;
+      flex-direction: row;
+    }
 }

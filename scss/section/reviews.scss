@@ -12,17 +12,10 @@
   width: 25%;
   height: 50%;
   color: #fff;
-}
-
-.reviews__photo {
-  width: 100%;
-  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   filter: grayscale(100);
-  // &:hover {
-  //   background: rgba(0,0,0,0.5);
-  // }
 }
 
 .reviews__text {
@@ -30,7 +23,7 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: .3s;
+  transition: .4s;
   &:hover {
     opacity: 1;
     background: rgba(0,0,0,0.5);
@@ -57,7 +50,7 @@
   font-size: 13px;
   padding: 10px 15px;
   background-color: $dark;
-  border-radius: 10px;
+  border-radius: 7px;
   transition: .3s;
   &:hover {
     background-color: #000;
