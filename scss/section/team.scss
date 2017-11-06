@@ -13,27 +13,35 @@
   width: 50%;
   background-color: rgba($dark, .93);
   color:  #fff;
-  padding-left: 70px;
+  padding-left: 75px;
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 62px;
   justify-content: flex-start;
+}
+
+.team-acco {
+  margin-top: 62px;
 }
 
 .team-acco__trigger {
   text-decoration: none;
   color: #fff;
   font-family: 'gagalin';
+  font-size: 14px;
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
+  margin-left: 5px;
 
   &:before {
   content: "";
-  width: 9px;
-  height: 9px;
-  border: 9px solid transparent;
+  width: 5px;
+  height: 5px;
+  border: 5px solid transparent;
   border-top-color: $yellow;
   border-bottom-width: 0px;
+  margin-right: 5px;
   }
 }
 

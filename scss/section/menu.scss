@@ -18,67 +18,55 @@
   bottom: 0;
   overflow: hidden;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .menu-acco__item {
   height: 100%;
   display: flex;
   flex-direction: row;
-  position: relative;
-  overflow: hidden;
   transition: .6s;
-  width: 80px;
+
+  &_active {
+    align-items: flex-start;
+
+    .menu-acco__text {
+      display: flex;
+    }
+
+    .menu-acco__title-text {
+      color: $orange;
+    }
+  }
 }
 
-.menu-acco__content {
-  width: 100%;
-  background-color: rgba($dark, .6);
-  display: flex;
+.menu-acco__text {
+  width: 540px;
+  background-color: rgba($dark, .93);
+  height: 100%;
+  font-family: "ubuntulight";
+  color: #fff;
   z-index: 2;
-  align-items: flex-start;
+  display: none;
+  padding: 30px 60px;
 }
 
 .menu-acco__title {
-  width: 80px;
   height: 100%;
+  position: relative;
 }
 
 .menu-acco__title-text {
-  left: -105px;
-  top: 50%;
-  height: 80px;
+  left: -150px;
+  top: 20%;
+  align-items: center;
   white-space: nowrap;
-   font-family: "gagalin";
-   font-size: 40px;
-   font-weight: 400;
-   text-align: center;
-   color: #fff;
-   text-decoration: none;
-   transform: rotate(-90deg);
-   position: absolute;
-
-
-}
- // {
-//   font-family: "gagalin";
-//   font-size: 40px;
-//   font-weight: 400;
-//   text-align: center;
-//   color: #fff;
-//   text-decoration: none;
-//   transform: rotate(-90deg) translate(-50%, -50%);
-//   position: absolute;
-//   height: 80px;
-//   top: 20%;
-//   left: -50px;
-//   margin: 0;
-//   white-space: nowrap;
-// }
-
-
-.menu-acco__text {
-  height: 100%;
-  font-family: "ubuntulight";
-  // position: absolute;
-  z-index: 2;
+ font-family: "gagalin";
+ font-size: 40px;
+ font-weight: 400;
+ color: #fff;
+ text-decoration: none;
+ transform: rotate(-90deg) translate(-50%, -50%);
+ position: absolute;
 }

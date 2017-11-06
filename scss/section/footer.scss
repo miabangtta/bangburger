@@ -8,6 +8,11 @@
   flex-direction: row;
   flex-basis: 50%;
   overflow: hidden;
+  justify-content: space-between;
+}
+
+.footer__address {
+  white-space: nowrap;
 }
 
 .footer__contacts, .footer__socials {
