@@ -1185,8 +1185,6 @@ ul {
 
 .socials__item {
   margin-left: 0.625rem; }
-  .socials__item:last-child {
-    margin-left: 0; }
 
 .pagination {
   top: 6.25rem;
