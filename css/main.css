@@ -488,8 +488,11 @@ ul {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
-  .best .section__title {
+  .best .section-title {
     margin-bottom: 5rem; }
+
+.best__icon {
+  height: 100px; }
 
 .best__icon-pic {
   width: 90%;
@@ -525,10 +528,6 @@ ul {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;

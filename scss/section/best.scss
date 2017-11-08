@@ -3,9 +3,13 @@
   background-size: cover;
   display: flex;
   align-items: center;
-  .section__title {
+  .section-title {
     margin-bottom: rem(80px);
   }
+}
+
+.best__icon {
+  height: 100px;
 }
 
 .best__icon-pic {
@@ -28,7 +32,6 @@
 .best__item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   text-align: center;
   margin-bottom: rem(50px);
