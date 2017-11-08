@@ -1,7 +1,7 @@
 .section-title {
   color: #f9b43b;
   font-family: "gagalin";
-  font-size: 72px;
+  font-size: rem(72px);
   font-weight: 400;
   line-height: 1.42;
   margin: 0;
@@ -20,7 +20,7 @@
   }
 
   &_margin-left {
-    margin-left: 100px;
-    margin-right: 30px;
+    margin-left: rem(100px);
+    margin-right: rem(30px);
   }
 }

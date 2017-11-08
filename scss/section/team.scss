@@ -5,60 +5,96 @@
   position: relative;
 }
 
-.team__container {
+.team__content {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
-  width: 50%;
+  left: 50%;
   background-color: rgba($dark, .93);
   color:  #fff;
-  padding-left: 75px;
+  padding: 5% 2% 0 7%;
   display: flex;
   flex-direction: column;
-  padding-top: 62px;
   justify-content: flex-start;
+
+  @include tablets {
+    left: 0;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .team-acco {
-  margin-top: 62px;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    justify-content: center;
+    align-items: center;
+    }
 }
 
 .team-acco__trigger {
   text-decoration: none;
+  white-space: nowrap;
   color: #fff;
   font-family: 'gagalin';
-  font-size: 14px;
+  font-size: rem(14px);
   display: flex;
+  margin-bottom: rem(30px);
+  margin-left: 5%;
   align-items: center;
-  margin-bottom: 30px;
-  margin-left: 5px;
 
   &:before {
   content: "";
-  width: 5px;
-  height: 5px;
-  border: 5px solid transparent;
+  width: rem(5px);
+  height: rem(5px);
+  border: rem(5px) solid transparent;
   border-top-color: $yellow;
-  border-bottom-width: 0px;
-  margin-right: 5px;
+  border-bottom-width: 0;
+  margin-right: rem(5px);
+  }
+
+  @include tablets {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
   }
 }
 
 .team-acco__content {
+  margin-left: 5%;
   display: none;
   font-family: "ubuntulight";
+  font-size: 14px;
+
+    @include tablets {
+      text-align: center;
+      align-items: center;
+      font-size: 12px;
+    }
 }
 
 .team-acco__avatar {
-  width: 100px;
-  height: 100px;
+  width: rem(100px);
+  height: rem(100px);
   border-radius: 50%;
-  background-position: center center;
+  flex-shrink: 0;
+}
+
+.team-acco__img {
+  width: rem(100px);
+  height: rem(100px);
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
-  flex-shrink: 0;
+  background-position: center center;
+}
+
+.team-acco__text-title {
+  font-weight: 500;
 }
 
 .team-acco__item_active {
@@ -72,5 +108,10 @@
     .team-acco__content {
       display: flex;
       flex-direction: row;
+
+      @include tablets {
+        flex-direction: column;
+        text-align: center;
+      }
     }
 }

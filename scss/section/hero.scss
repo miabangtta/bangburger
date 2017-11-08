@@ -6,18 +6,9 @@
   flex-direction: column;
 }
 
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-}
-
 .hero__container {
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -25,78 +16,23 @@
 .hero__content {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
   padding-bottom: 17%;
+  flex-direction: row;
+
+  @include tablets {
+    flex-direction: column;
+    padding: 0 rem(130px);
+  }
+
+  @include phones {
+    padding: 0;  
+  }
 }
 
 .hero__logo {
-  margin-right: 14.0625rem;
-}
-
-.nav {
-  margin-right: rem(15px);
-}
-
-.nav__list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.nav__item {
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  &:after {
-    display: inline-flex;
-    align-items: center;
-    content: ' ';
-    @include circle(5px, #fff);
-    margin: 0 rem(15px);
-  }
-  &:last-child:after {
-    display: none;
-  }
-}
-
-.nav__link {
-  color: #fff;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.42;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  vertical-align: middle;
-  transition: .5s;
-  &:hover {
-    text-decoration: underline;
-  }
-  }
-
-.header__button {
-  display: inline-flex;
-  padding: 0 rem(13px);
-  background-color: #e45028;
-  border: 0;
-  border-radius: 5px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 13px;
-  line-height: 35px;
-  color: #fff;
-  text-decoration: none;
-  &:hover {
-    background-color: #c1401e;
-  }
-}
-
-
-.hero__intro {
-  display: flex;
-  flex-flow: row nowrap;
+  // width: rem(100px);
 }
 
 .hero__image {
@@ -104,6 +40,14 @@
   display: flex;
   margin-left: rem(12px);
   margin-right: 1.325rem;
+
+  @include tablets {
+    flex-basis: 100%;
+  }
+}
+
+.hero__image-pic {
+  height: rem(250px);
 }
 
 .hero__text {
@@ -112,12 +56,18 @@
   flex-direction: column;
   justify-content: center;
   margin-top: rem(60px);
+
+  @include tablets {
+    flex-basis: 100%;
+    margin-top: 0;
+    text-align: center;
+  }
 }
 
 .hero__desc {
   color: #fff;
   font-family: "lifehack";
-  font-size: 63px;
+  font-size: rem(63px);
   font-weight: 500;
   line-height: 1;
   margin-top: rem(6px);
@@ -126,8 +76,8 @@
 .arrow-scroll {
   display: inline-flex;
   position: absolute;
-  height: 15px;
-  width: 30px;
-  bottom: 30px;
+  height: rem(15px);
+  width: rem(30px);
+  bottom: rem(30px);
   left: 50%;
 }

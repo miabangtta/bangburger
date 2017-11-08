@@ -8,7 +8,10 @@
 @import "layout/adjustment";
 
 //section
+@import "section/header";
 @import "section/hero";
+@import "section/hamburger-menu";
+@import "section/hamburger-menu-link";
 @import "section/common/section__title";
 @import "section/best";
 @import "section/reviews";
@@ -18,3 +21,6 @@
 @import "section/contacts";
 @import "section/footer";
 @import "section/pagination";
+
+// media
+// @import "media";

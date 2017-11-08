@@ -11,16 +11,18 @@
 }
 
 .container {
-  width: 940px;
+  width: 95%;
+  max-width: 940px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .section {
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0,0,0,0.31);
   min-width: 100vh;
   min-height: 650px;
@@ -28,21 +30,4 @@
 
 .section_centered {
   align-items: center;
-}
-
-.header__button-link {
-  min-width: rem(98px);
-  padding: 10px 17px;
-  border-radius: 5px;
-  background-color: $orange;
-  color: #fff;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.42;
-  text-transform: uppercase;
-  transition: 0.5s;
-  &:hover {
-    background-color: darken($orange, 10%);
-  }
 }

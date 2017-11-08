@@ -1,6 +1,6 @@
 .pagination {
-  top: 100px;
-  right: 30px;
+  top: rem(100px);
+  right: rem(30px);
   position: fixed;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .pag__item {
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
   content: " ";
-  @include circle (8px, #fff);
+  @include circle (rem(8px), #fff);
 }

@@ -3,21 +3,35 @@
   bottom: 0;
   width: 100%;
   background-image: url("../img/content/footer-bg.jpg");
-  height: 60px;
+  height: rem(60px);
+}
+
+.footer__container {
   display: flex;
   flex-direction: row;
   flex-basis: 50%;
   overflow: hidden;
   justify-content: space-between;
+
+  @include phones {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    flex-basis: 100%;
+  }
 }
 
 .footer__address {
   white-space: nowrap;
+
+  @include phones {
+    white-space: initial;
+  }
 }
 
 .footer__contacts, .footer__socials {
   color: #fff;
-  margin: 5px 80px;
+  margin: rem(5px) rem(10px);
 }
 
 .footer__phone-text {
@@ -27,12 +41,20 @@
 
 .socials__list {
   text-align: right;
+  display: flex;
+  flex-direction: row;
 }
 
 .socials__icon {
-  fill: $dark;
-}
-
-.socials__icon:hover {
+  display: inline-flex;
+  width: rem(25px);
+  height: rem(25px);
+  margin-left: rem(10px);
+  fill: #00bfa5;
+ &:hover {
   fill: #fff;
+  }
+  &:last-child {
+    margin-left: 0;
+  }
 }
