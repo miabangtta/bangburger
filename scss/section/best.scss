@@ -5,11 +5,26 @@
   align-items: center;
   .section-title {
     margin-bottom: rem(80px);
+
+    @include tablets {
+      margin-bottom: 0;
+    }
+
+    @include phones {
+      margin-bottom: 3rem;
+      font-size: rem(55px);
+    }
   }
 }
 
 .best__icon {
-  height: 100px;
+  display: block;
+  height: rem(100px);
+
+  @include phones {
+    width: rem(200px);
+    margin-right: rem(50px);
+  }
 }
 
 .best__icon-pic {
@@ -26,6 +41,7 @@
 
   @include phones {
     flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -40,8 +56,12 @@
   max-width: rem(350px);
 
   @include phones {
+    text-align: left;
     flex-direction: row;
-    width: rem(400px);
+    padding: 0;
+    width: 100%;
+    margin-bottom: rem(20px);
+    max-width: initial;
   }
 }
 
@@ -58,5 +78,6 @@
   text-align: center;
   @include phones {
     text-align: left;
+    font-size: rem(14px);
   }
 }

@@ -23,4 +23,8 @@
     margin-left: rem(100px);
     margin-right: rem(30px);
   }
+
+  @include phones {
+    font-size: rem(50px);
+  }
 }

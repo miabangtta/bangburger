@@ -19,15 +19,14 @@
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  @include tablets {
+    max-width: 768px;
+  }
 }
 
 .section {
   height: 100vh;
-  background-color: rgba(0,0,0,0.31);
-  min-width: 100vh;
   min-height: 650px;
-}
-
-.section_centered {
-  align-items: center;
+  background-color: rgba(0,0,0,0.31);
+  min-width: 100vw;
 }

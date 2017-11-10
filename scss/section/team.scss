@@ -13,7 +13,7 @@
   left: 50%;
   background-color: rgba($dark, .93);
   color:  #fff;
-  padding: 5% 2% 0 7%;
+  padding: 5% 1% 0 6%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -26,14 +26,14 @@
 }
 
 .team-acco {
-  margin-top: 5%;
+  margin-top: 14%;
   display: flex;
   flex-direction: column;
 
   @include tablets {
     justify-content: center;
     align-items: center;
-    }
+  }
 }
 
 .team-acco__trigger {
@@ -43,8 +43,7 @@
   font-family: 'gagalin';
   font-size: rem(14px);
   display: flex;
-  margin-bottom: rem(30px);
-  margin-left: 5%;
+  margin-bottom: 2rem;
   align-items: center;
 
   &:before {
@@ -54,7 +53,7 @@
   border: rem(5px) solid transparent;
   border-top-color: $yellow;
   border-bottom-width: 0;
-  margin-right: rem(5px);
+  margin-right: 0.4rem;
   }
 
   @include tablets {
@@ -62,44 +61,71 @@
     justify-content: center;
     width: 100%;
     margin-left: 0;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  @include phones {
+    font-size: rem(24px);
   }
 }
 
 .team-acco__content {
-  margin-left: 5%;
+  margin-bottom: 1%;
   display: none;
   font-family: "ubuntulight";
-  font-size: 14px;
+  margin-bottom: 0.6rem;
 
     @include tablets {
       text-align: center;
       align-items: center;
-      font-size: 12px;
     }
 }
 
 .team-acco__avatar {
-  width: rem(100px);
-  height: rem(100px);
-  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
   flex-shrink: 0;
+  margin-right: rem(5px);
+  text-align: center;
 }
 
 .team-acco__img {
+  margin: 0 auto;
   width: rem(100px);
   height: rem(100px);
+  border-radius: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+
+  @include phones {
+    width: rem(110px);
+    height: rem(110px);
+  }
+}
+
+.team-acco__text {
+  width: 13rem;
+  font-size: 14px;
+
+  @include tablets {
+    width: rem(348px);
+  }
+
+  @include phones {
+    width: rem(400px);
+  }
 }
 
 .team-acco__text-title {
-  font-weight: 500;
+  font-family: 'ubuntubold';
 }
 
 .team-acco__item_active {
   .team-acco__trigger {
     color: $yellow;
+    margin-bottom: 1rem;
     &:before {
       transform: rotate(-180deg);
       }

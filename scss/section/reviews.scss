@@ -24,7 +24,7 @@
 }
 
 .reviews__text {
-  padding: rem(30px) rem(20px);
+  padding: 2.5rem 1rem;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -35,7 +35,11 @@
   }
 
   @include tablets {
-    padding: rem(15px) rem(10px);
+    // padding: rem(15px) rem(10px);
+    text-align: center;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    padding: 1rem 2rem;
   }
 }
 
@@ -54,10 +58,10 @@
   line-height: 1.42;
   font-size: rem(14px);
   font-family: "ubuntulight", sans-serif;
-  margin-bottom: rem(30px);
+  margin-bottom: 3rem;
 
   @include tablets {
-    margin-bottom: rem(10px);
+    margin-bottom: rem(17px);
   }
 }
 
@@ -69,7 +73,7 @@
   padding: rem(10px) rem(15px);
   background-color: $dark;
   border-radius: rem(7px);
-  transition: .3s;
+  transition: .4s;
   &:hover {
     background-color: #000;
   }

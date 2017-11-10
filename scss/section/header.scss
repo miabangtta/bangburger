@@ -11,11 +11,15 @@
   display: inline-flex;
   align-items: center;
   margin-left: auto;
+
+  @include tablets {
+    margin-right: rem(16px);
+  }
 }
 
 .header__menu {
   flex: 1;
-  margin-right: rem(15px);
+  margin-right: 1rem;
   text-align: right;
 
     @include tablets {
@@ -64,7 +68,7 @@
 
 .header__button {
   display: inline-flex;
-  padding: 0 rem(13px);
+  padding: 0 rem(12px);
   background-color: #e45028;
   border: 0;
   border-radius: rem(5px);
@@ -76,5 +80,13 @@
   text-decoration: none;
   &:hover {
     background-color: #c1401e;
+  }
+
+  @include tablets {
+    padding: 0 rem(17px);
+  }
+
+  @include phones {
+    padding: 0 1.6rem;
   }
 }

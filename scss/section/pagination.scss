@@ -2,6 +2,10 @@
   top: rem(100px);
   right: rem(30px);
   position: fixed;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .pag__list {
