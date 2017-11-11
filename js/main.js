@@ -4,14 +4,14 @@ var myMap;
 function init(){
       myMap = new ymaps.Map("map", {
         center: [59.91817154482064,30.30557799999997],
-        zoom: 10,
+        zoom: 11,
         controls: []
 
     });
 
     myMap.behaviors.disable("scrollZoom");
 
-    var coords = [
+    coords = [
     [59.94554327989287,30.38935262114668],
     [59.91142323563909,30.50024587065841],
     [59.88693161784606,30.319658102103713],
@@ -19,7 +19,7 @@ function init(){
     ],
     myCollection = new ymaps.GeoObjectCollection({}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/icons/map-marker.svg',
+      iconImageHref: './img/icons/map-marker.svg',
       iconImageSize: [46, 57],
       iconImageOffset: [-26, -52],
       draggable: false
