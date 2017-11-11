@@ -547,20 +547,6 @@ ul {
         margin-bottom: 3rem;
         font-size: 3.4375rem; } }
 
-.best__icon {
-  display: block;
-  height: 6.25rem; }
-  @media screen and (max-width: 480px) {
-    .best__icon {
-      width: 12.5rem;
-      margin-right: 3.125rem; } }
-
-.best__icon-pic {
-  width: 90%;
-  height: 6.25rem; }
-  .best__icon-pic svg {
-    max-width: 95%; }
-
 .best__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -595,10 +581,11 @@ ul {
   -ms-flex-align: start;
   align-items: flex-start;
   text-align: center;
+  margin-right: 0.9375rem;
   margin-bottom: 3.125rem;
-  padding: 0 0.9375rem;
-  width: 30vw;
   max-width: 21.875rem; }
+  .best__item:last-child {
+    margin-right: 0; }
   @media screen and (max-width: 480px) {
     .best__item {
       text-align: left;
@@ -613,17 +600,29 @@ ul {
       max-width: initial; } }
 
 @media screen and (max-width: 480px) {
-  .best__icon {
-    width: 20%; } }
-
-@media screen and (max-width: 480px) {
   .best__content {
     width: 80%; } }
+
+.best__icon {
+  display: block;
+  height: 6.25rem;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    .best__icon {
+      width: 20%;
+      margin-right: 3.125rem; } }
+
+.best__icon-pic {
+  width: 90%;
+  height: 5.25rem; }
+  .best__icon-pic svg {
+    max-width: 95%; }
 
 .best__head {
   font-size: 1.5rem;
   font-family: "lifehack", Arial, sans-serif;
-  margin-bottom: 1.25rem; }
+  margin-bottom: 0.625rem;
+  line-height: 1.2; }
   @media screen and (max-width: 480px) {
     .best__head {
       font-size: 1.7rem;
@@ -631,6 +630,7 @@ ul {
 
 .best__text {
   font-size: 0.875rem;
+  line-height: 1.8;
   color: #2f3234;
   font-family: "ubuntulight", arial, sans-serif;
   text-align: center; }
