@@ -2,7 +2,7 @@ ymaps.ready(init);
 var myMap;
 
 function init(){
-    myMap = new ymaps.Map("map", {
+      myMap = new ymaps.Map("map", {
         center: [59.91817154482064,30.30557799999997],
         zoom: 10,
         controls: []
@@ -19,7 +19,7 @@ function init(){
     ],
     myCollection = new ymaps.GeoObjectCollection({}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/icons/map-maker.svg',
+      iconImageHref: '../img/icons/map-marker.svg',
       iconImageSize: [46, 57],
       iconImageOffset: [-26, -52],
       draggable: false
@@ -31,7 +31,7 @@ for (var i = 0; i < coords.length; i++) {
 
 myMap.geoObjects.add(myCollection);
 
-});
+};
 
 //
 // var menu = document.getElementByID('menu')
