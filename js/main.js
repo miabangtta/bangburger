@@ -9,7 +9,7 @@ function init(){
 
     });
 
-    myMap.behaviors.disable("scrollZoom"),
+    myMap.behaviors.disable("scrollZoom");
 
     var coords = [
     [59.94554327989287,30.38935262114668],
