@@ -1,0 +1,92 @@
+.burger {
+	background: #f9b43b; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f9b43b 0%,#eb8c38 40%,#eb8c38 60%,#eb8c38 60%,#f9b43b 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f9b43b 0%,#eb8c38 40%,#eb8c38 60%,#eb8c38 60%,#f9b43b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 ); /* IE6-9 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.section-title {
+		margin-bottom: rem(15px);
+		color: #fff;
+	}
+}
+
+.burger-slider {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+.burger-slider__beef {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+}
+
+.burger__image {
+	width: 40%;
+	vertical-align: middle;
+	position: relative;
+}
+
+.burger__image-img {
+	width: 100%;
+}
+
+.burger__content {
+	width: 60%;
+}
+
+.burger__small {
+	width: rem(90px);
+	height: rem(90px);
+	background-color: #f08c33;
+	position: absolute;
+}
+
+.burger__kkal {
+	width: rem(60px);
+	height: rem(77px);
+	position: absolute;
+}
+
+.burger__content {
+	color: #fff;
+	font-family: 'ubuntulight';
+	font-style: rem(14px);
+}
+
+.burger__price {
+	color: $orange;
+	font-family: 'gagalin', Arial, sans-serif;
+	&_sum {
+		font-size: rem(70px);
+	}
+	&_rub {
+		font-size: rem(30px);
+	}
+}
+
+.burger__order-btn {
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #e45028;
+	text-transform: uppercase;
+	border-radius: rem(5px);
+	text-align: center;
+	font-family: 'ubuntumedium';
+	font-size: rem(13px);
+	line-height: rem(35px);
+	color: #fff;
+	text-decoration: none;
+	padding: 0 rem(15px);
+	cursor: pointer;
+	transition: 0.3s;
+	margin-left: rem(25px);
+	&:hover {
+		background-color: #c1401e;
+	}
+}

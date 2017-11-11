@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mr Burger</title>
   <link rel="stylesheet" href="css/normalize.css">
@@ -48,7 +48,7 @@
               <img src="./img/content/burger-drops.png" class="hero__img" alt="logo">
             </div>
             <div class="hero__text">
-              <h1 class="section-title">Мы делаем</h1>
+              <div class="section-title">Мы делаем</div>
               <div class="hero__desc">натуральные бургеры</div>
             </div>
           </div>
@@ -59,7 +59,7 @@
       </section>
       <section class="section best section__centered">
         <div class="container">
-          <h1 class="section-title section-title_color_black section-title_centered">Мы лучшие</h1>
+          <h2 class="section-title section-title_color_black section-title_centered">Мы лучшие</h2>
           <ul class="best__list">
             <li class="best__item">
               <div class="best__icon">
@@ -109,12 +109,53 @@
           </ul>
         </div>
       </section>
+      <section class="section burger">
+        <div class="container">
+          <div class="burger-slider">
+            <div class="burger-slider__beef">
+              <div class="burger__image">
+                <img src="img/content/beef-burger.png" alt="dark beef burger" class="burger__image-img">
+                <div class="burger__small">
+                  <img src="img/icons/burger.svg" alt="icon" class="burger__small-icon">
+                </div>
+                <div class="burger__kkal">
+                  <img src="img/icons/kkal.svg" alt="kkal" class="burger__kkal-icon">
+                </div>
+              </div>
+              <div class="burger__content">
+                <div class="burger__title">
+                  <h3 class="section-title">dark beef burger</h3>
+                </div>
+                <div class="burger__descr">
+                  <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                </div>
+                <div class="burger__price">
+                  <span class="burger__price_sum">550</span>
+                  <span class="burger__price_rub">рублей</span>
+                  <a href="#" class="burger__order-btn">Заказать</a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <a href="#" class="burger__scroll-prev">
+            <img src="img/icons/arrow-scroll.svg" alt="scroll" class="burger__scroll-p-icon">
+          </a>
+
+          <a href="#" class="burger__scroll-next">
+            <img src="img/icons/arrow-scroll.svg" alt="scroll" class="burger__scroll-n-icon">
+          </a>
+
+
+        </div>
+      </section>
       <section class="section team">
         <div class="container team__container">
           <div class="team__content">
-            <h1 class="section-title">
+            <h2 class="section-title">
               Команда
-            </h1>
+            </h2>
             <ul class="team-acco">
               <li class="team-acco__item">
                 <a href="#" class="team-acco__trigger">Дэниел Редклиф</a>
@@ -286,59 +327,59 @@
         <div class="container">
           <h2 class="section-title order__title">Закажите доставку</h2>
           <div class="form">
-            <form action="" class="form__elem">
+            <form class="form__elem">
               <div class="form__content">
                 <div class="form__row">
-                  <label class="form__block">
+                  <label for="fname" class="form__block">
                     <span class="form__block-title">Имя</span>
-                    <input type="text" name="fname" class="form__input">
+                    <input type="text" id="fname" name="fname" class="form__input">
                   </label>
                   <label for="secname" class="form__block">
                     <span class="form__block-title">Телефон</span>
-                    <input type="text" name="secname" class="form__input">
+                    <input type="text" id="secname" name="secname" class="form__input">
                   </label>
                 </div>
                 <div class="form__row">
                   <label for="street" class="form__block">
                     <span class="form__block-title">Улица</span>
-                    <input type="text" name="street" class="form__input">
+                    <input type="text" id="street" name="street" class="form__input">
                   </label>
                 </div>
                 <div class="form__row">
                   <label for="build" class="form__block">
                     <span class="form__block-title">Дом</span>
-                    <input type="text" name="build" class="form__input">
+                    <input type="text" id="build" name="build" class="form__input">
                   </label>
-                  <label for="block" class="form__block">
+                  <label for="nblock" class="form__block">
                     <span class="form__block-title">Корпус</span>
-                    <input type="text" name="block" class="form__input">
+                    <input type="text" id="nblock" name="block" class="form__input">
                   </label>
                   <label for="flat" class="form__block">
                     <span class="form__block-title">Квартира</span>
-                    <input type="text" name="flat" class="form__input">
+                    <input type="text" id="flat" name="flat" class="form__input">
                   </label>
                   <label for="floor" class="form__block">
                     <span class="form__block-title">Этаж</span>
-                    <input type="text" name="floor" class="form__input">
+                    <input type="text" id="floor" name="floor" class="form__input">
                   </label>
                 </div>
               </div>
               <div class="form__content">
                 <div class="form__row">
-                  <label class="form__block">
+                  <label for="comment" class="form__block">
                     <span class="form__block-title">Комментарий</span>
-                    <textarea name="comment" class="form__teatarea"></textarea>
+                    <textarea name="comment" id="comment" class="form__teatarea"></textarea>
                   </label>
                 </div>
                 <div class="form__row form__row_center">
-                  <label class="form__block">
+                  <label for="change" class="form__block">
                     <input type="radio" name="payby" id="change" value="change" class="form__input form__input-radio">
                     <span class="form__input-circle">
                       <span class="form__input-inner"></span>
                     </span>
                     <span class="form__block-title">Потребуется сдача</span>
                   </label>
-                  <label form="card" class="form__block">
+                  <label for="card" class="form__block">
                     <input type="radio" name="payby" id="card" value="card" class="form__input form__input-radio">
                     <span class="form__input-circle">
                       <span class="form__input-inner"></span>
@@ -347,8 +388,8 @@
                   </label>
                 </div>
                 <div class="form__row form__row_center">
-                  <label class="form__block">
-                    <input type="checkbox" checked name="dontcall" class="form__input form__input-checkbox">
+                  <label for="dontcall" class="form__block">
+                    <input type="checkbox" checked id="dontcall" name="dontcall" class="form__input form__input-checkbox">
                     <span class="form__input-square">
                       <span class="form__input-check"></span>
                     </span>
@@ -366,7 +407,7 @@
       </section>
       <section class="section contacts">
         <div class="contacts__container">
-          <div class="contacts__map"></div>
+          <div class="contacts__map" id="map"></div>
           <h2 class="section-title visuallyhidden">Контакты</h2>
           <h3 class="contacts__address visuallyhidden">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</h3>
           <h3 class="contacts__phone visuallyhidden">+7 (812) 377-13-77</h3>
@@ -409,7 +450,7 @@
     </div>
   </div>
 
-  <sec class="pagination">
+  <section class="pagination">
     <ul class="pag__list">
       <li class="pag__item"></li>
       <li class="pag__item"></li>
@@ -421,6 +462,8 @@
       <li class="pag__item"></li>
     </ul>
   </section>
-<script src="main.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+</script>
+<script src="js/main.js"></script>
 </body>
 </html>

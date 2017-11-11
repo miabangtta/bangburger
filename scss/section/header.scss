@@ -7,6 +7,11 @@
   padding-top: rem(10px);
 }
 
+.hero__logo {
+  height: rem(69px);
+  display: inline-flex;
+}
+
 .header__btns {
   display: inline-flex;
   align-items: center;
@@ -22,9 +27,9 @@
   margin-right: 1rem;
   text-align: right;
 
-    @include tablets {
-      display: none;
-    }
+  @include tablets {
+    display: none;
+  }
 }
 
 .nav__list {
@@ -68,7 +73,7 @@
 
 .header__button {
   display: inline-flex;
-  padding: 0 rem(12px);
+  padding: 0 rem(14px);
   background-color: #e45028;
   border: 0;
   border-radius: rem(5px);

@@ -16,6 +16,10 @@
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
+
+  @include phones {
+    font-size: 3.77rem;
+  }
 }
 
 .form__elem {
@@ -61,7 +65,6 @@
       white-space: nowrap;
     }
   }
-
 
   @include tablets {
   margin-bottom: rem(10px);
@@ -207,5 +210,10 @@
   @include tablets {
     padding: 0 1.2rem;
     margin-top: 0.6rem;
+  }
+
+
+  @include phones {
+    margin-top: 0;
   }
 }

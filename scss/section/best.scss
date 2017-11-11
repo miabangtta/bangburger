@@ -65,10 +65,27 @@
   }
 }
 
+.best__icon {
+  @include phones {
+    width: 20%;
+  }
+}
+
+.best__content {
+  @include phones {
+    width: 80%;
+  }
+}
+
+
 .best__head {
   font-size: rem(24px);
   font-family: "lifehack", Arial, sans-serif;
   margin-bottom: rem(20px);
+  @include phones {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .best__text {
@@ -78,6 +95,7 @@
   text-align: center;
   @include phones {
     text-align: left;
-    font-size: rem(14px);
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
