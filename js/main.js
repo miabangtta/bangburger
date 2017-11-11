@@ -11,7 +11,8 @@ function init(){
 
     myMap.behaviors.disable("scrollZoom"),
 
-    var coords = [[59.94554327989287,30.38935262114668],
+    var coords = [
+    [59.94554327989287,30.38935262114668],
     [59.91142323563909,30.50024587065841],
     [59.88693161784606,30.319658102103713],
     [59.97033574821672,30.315194906302924]
@@ -21,8 +22,7 @@ function init(){
       iconImageHref: '../img/icons/map-maker.svg',
       iconImageSize: [46, 57],
       iconImageOffset: [-26, -52],
-       // preset: 'islands#redIcon', //все метки красные
-       draggable: false
+      draggable: false
     });
 
 for (var i = 0; i < coords.length; i++) {

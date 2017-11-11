@@ -83,10 +83,11 @@
 }
 
 .team-acco__avatar {
-  width: 8rem;
-  height: 8rem;
+  border-radius: 50%;
   flex-shrink: 0;
-  margin-right: rem(5px);
+  // margin-right: rem(15px);
+  width: rem(140px);
+  margin-bottom: rem(25px);
   text-align: center;
 }
 
@@ -110,7 +111,7 @@
   font-size: 14px;
 
   @include tablets {
-    width: rem(348px);
+    width: rem(360px);
   }
 
   @include phones {

@@ -950,12 +950,12 @@ ul {
       align-items: center; } }
 
 .team-acco__avatar {
-  width: 8rem;
-  height: 8rem;
+  border-radius: 50%;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin-right: 0.3125rem;
+  width: 8.75rem;
+  margin-bottom: 1.5625rem;
   text-align: center; }
 
 .team-acco__img {
@@ -976,7 +976,7 @@ ul {
   font-size: 14px; }
   @media screen and (max-width: 768px) {
     .team-acco__text {
-      width: 21.75rem; } }
+      width: 22.5rem; } }
   @media screen and (max-width: 480px) {
     .team-acco__text {
       width: 25rem; } }
