@@ -6,10 +6,6 @@
   .section-title {
     margin-bottom: rem(80px);
 
-    @include tablets {
-      margin-bottom: 0;
-    }
-
     @include phones {
       margin-bottom: 3rem;
       font-size: rem(55px);
@@ -45,6 +41,7 @@
     flex-direction: row;
     padding: 0;
     width: 100%;
+    margin-right: 0;
     margin-bottom: rem(20px);
     max-width: initial;
   }
@@ -60,16 +57,18 @@
   display: block;
   height: rem(100px);
   text-align: center;
+  margin-bottom: rem(25px);
 
   @include phones {
     width: 20%;
     margin-right: rem(50px);
+    margin-bottom: 0;
   }
 }
 
 .best__icon-pic {
   width: 90%;
-  height: 5.25rem;
+  height: 5.5rem;
   svg {
     max-width: 95%;
   }

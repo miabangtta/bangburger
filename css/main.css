@@ -539,9 +539,6 @@ ul {
   align-items: center; }
   .best .section-title {
     margin-bottom: 5rem; }
-    @media screen and (max-width: 768px) {
-      .best .section-title {
-        margin-bottom: 0; } }
     @media screen and (max-width: 480px) {
       .best .section-title {
         margin-bottom: 3rem;
@@ -596,6 +593,7 @@ ul {
       flex-direction: row;
       padding: 0;
       width: 100%;
+      margin-right: 0;
       margin-bottom: 1.25rem;
       max-width: initial; } }
 
@@ -606,15 +604,17 @@ ul {
 .best__icon {
   display: block;
   height: 6.25rem;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 1.5625rem; }
   @media screen and (max-width: 480px) {
     .best__icon {
       width: 20%;
-      margin-right: 3.125rem; } }
+      margin-right: 3.125rem;
+      margin-bottom: 0; } }
 
 .best__icon-pic {
   width: 90%;
-  height: 5.25rem; }
+  height: 5.5rem; }
   .best__icon-pic svg {
     max-width: 95%; }
 
