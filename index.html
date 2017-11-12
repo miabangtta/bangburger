@@ -37,7 +37,10 @@
               </div>
               <div class="header__links">
                 <a href="#" class="header__button" data-goto="6">Заказать</a>
-                <div class="hamburger-menu">
+                <div class="hamburger-menu" id="menu">
+                  <div class="hamburger-menu__logo">
+                    <img src="img/icons/logo.svg" class="hamburger-menu__logo-pic" alt="logo">
+                  </div>
                   <ul class="hamburger-menu__list">
                     <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Почему мы</a></li>
                     <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Меню</a></li>
@@ -46,6 +49,11 @@
                     <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Свяжитесь с нами</a></li>
                     <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Контакты</a></li>
                   </ul>
+                  <a href="#" class="hamburger-menu__close" id="close">
+                    <svg class="hamburger-menu__close-icon">
+                      <use xlink:href="./img/icons/close.svg"></use>
+                    </svg>
+                  </a>
                 </div>
                 <a href="#" class="hamburger-menu-link" id="button">
                   <div class="hamburger-menu-link__bars"></div>
@@ -428,7 +436,8 @@
                 <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
                 <img class="socials__phone-icon" src="img/icons/phone.svg" alt="phone">
                 <span class="footer__phone">
-                <a href="tel.:+78123771377" class="footer__phone-text">+7 (812) 377-13-77</a></span>
+                  <a href="tel.:+78123771377" class="footer__phone-text">+7 (812) 377-13-77</a>
+                </span>
               </div>
               <div class="footer__socials socials">
                 <ul class="socials__list">

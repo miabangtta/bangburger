@@ -33,11 +33,15 @@ myMap.geoObjects.add(myCollection);
 
 };
 
-//
-// var menu = document.getElementByID('menu')
-// var button = document.getElementByID('button')
-//
-// button.addEventListener('click', function() {
-//   block.classList.add('active')
-//
-// })
+
+var menu = document.getElementById('menu')
+var button = document.getElementById('button')
+var close = document.getElementById('close')
+
+button.addEventListener('click', function() {
+ menu.classList.add('hamburger-menu_visible')
+})
+
+close.addEventListener('click', function() {
+ menu.classList.remove('hamburger-menu_visible')
+});

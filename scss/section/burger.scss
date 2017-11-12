@@ -45,12 +45,16 @@
 	height: rem(90px);
 	background-color: #f08c33;
 	position: absolute;
+	text-align: center;
+	left: 0;
+	top: 0;
 }
 
 .burger__kkal {
 	width: rem(60px);
 	height: rem(77px);
 	position: absolute;
+	bottom: 0;
 }
 
 .burger__content {
@@ -72,7 +76,6 @@
 
 .burger__order-btn {
 	display: inline-block;
-	vertical-align: middle;
 	background-color: #e45028;
 	text-transform: uppercase;
 	border-radius: rem(5px);
@@ -88,5 +91,33 @@
 	margin-left: rem(25px);
 	&:hover {
 		background-color: #c1401e;
+	}
+}
+
+.burger__scroll-prev {
+	position: absolute;
+	transform: rotate(90deg);
+	left: rem(10px);
+
+	&:hover {
+		.burger__scroll-p-icon {
+			use {
+				fill: #fff;
+			}
+		}
+	}
+}
+
+.burger__scroll-next {
+	position: absolute;
+	transform: rotate(-90deg);
+	right: rem(10px);
+
+	&:hover {
+		.burger__scroll-n-icon {
+			use {
+				fill: #fff;
+			}
+		}
 	}
 }
