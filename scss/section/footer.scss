@@ -46,6 +46,11 @@
 .footer__phone-text {
   color: $orange;
   text-decoration: none;
+  transition: .4s;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .socials__list {

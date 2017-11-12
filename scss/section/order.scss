@@ -77,6 +77,10 @@
   &:last-child  {
     margin-right: 0;
   }
+
+  &_pointer {
+    cursor: pointer;
+  }
 }
 
 .form__block-title {
