@@ -24,20 +24,46 @@
 	display: flex;
 	width: 100%;
 	flex-direction: row;
+
+	@include tablets {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 2% 10%;
+	}
+
+	@include phones {
+		padding: 0;
+	}
 }
 
 .burger__image {
 	width: 40%;
-	vertical-align: middle;
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include tablets {
+		width: 80%;
+	}
 }
 
 .burger__image-img {
 	width: 100%;
+	margin-top: rem(50px);
 }
 
 .burger__content {
 	width: 60%;
+	color: #fff;
+	font-family: 'ubuntulight';
+	font-size: rem(14px);
+
+	@include tablets {
+		text-align: center;
+		width: 100%;
+	}
 }
 
 .burger__small {
@@ -45,22 +71,65 @@
 	height: rem(90px);
 	background-color: #f08c33;
 	position: absolute;
-	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: rem(5px);
 	left: 0;
 	top: 0;
+}
+
+.burger__small-text {
+	font-size: rem(14px);
+	font-family: 'gagalin', Arial, sans-serif;
+	color: #fff;
 }
 
 .burger__kkal {
 	width: rem(60px);
 	height: rem(77px);
 	position: absolute;
+	left: 0;
 	bottom: 0;
+	opacity: .5;
+	text-align: center;
+	font-family: 'gagalin', Arial, sans-serif;
+	color: #fff;
+
+	@include tablets {
+		left: initial;
+		bottom: initial;
+		right: 0;
+		top: 0;
+	}
 }
 
-.burger__content {
-	color: #fff;
-	font-family: 'ubuntulight';
-	font-style: rem(14px);
+.burger__kkal-num {
+	margin-top: rem(-42px);
+	font-size: rem(20px);
+
+	@include phones {
+		margin-left: rem(4px);
+	}
+}
+
+.burger__kkal-line {
+	font-size: rem(14px);
+	margin-top: rem(6px);
+
+	@include phones {
+		margin-left: rem(4px);
+	}
+}
+
+.burger__title {
+	line-height: 1;
+	margin-bottom: rem(50px);
+
+	@include tablets {
+		text-align: center;
+	}
 }
 
 .burger__price {
@@ -68,9 +137,20 @@
 	font-family: 'gagalin', Arial, sans-serif;
 	&_sum {
 		font-size: rem(70px);
+
+		@include tablets {
+			margin-left: rem(-100px);
+		}
+		@include phones {
+			font-size: rem(50px);
+		}
 	}
 	&_rub {
 		font-size: rem(30px);
+
+		@include phones {
+			font-size: rem(24px);
+		}
 	}
 }
 
@@ -92,12 +172,23 @@
 	&:hover {
 		background-color: #c1401e;
 	}
+
+	@include tablets {
+		position: absolute;
+		margin-top: rem(50px);
+	}
+
+	@include phones {
+		margin-top: rem(28px);
+		padding: 0 rem(20px);
+	}
 }
 
 .burger__scroll-prev {
 	position: absolute;
 	transform: rotate(90deg);
 	left: rem(10px);
+	vertical-align: middle;
 
 	&:hover {
 		.burger__scroll-p-icon {

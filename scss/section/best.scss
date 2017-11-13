@@ -72,6 +72,10 @@
   svg {
     max-width: 95%;
   }
+
+  @include phones {
+    margin-left: rem(20px);
+  }
 }
 
 .best__head {
