@@ -14,7 +14,21 @@
 }
 
 .pag__item {
-  margin-bottom: rem(20px);
+  margin-bottom: rem(16px);
   content: " ";
-  @include circle (rem(8px), #fff);
+  @include circle (rem(5px), #fff);
+}
+.pag__link {
+    position: absolute;
+    display: block;
+    padding: rem(5px);
+    content: " ";
+    @include circle (rem(16px), transparent);
+    border: rem(1px) solid transparent;
+    margin-top: rem(-5px);
+    margin-left: rem(-5px);
+    cursor: pointer;
+}
+    .pag__item_active .pag__link,   .pag__item:hover .pag__link {
+    border: rem(1px) solid #fff;
 }

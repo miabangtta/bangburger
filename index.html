@@ -50,9 +50,7 @@
                     <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Контакты</a></li>
                   </ul>
                   <a href="#" class="hamburger-menu__close" id="close">
-                    <svg class="hamburger-menu__close-icon">
-                      <use xlink:href="img/icons/close.svg"></use>
-                    </svg>
+                    <div class="hamburger-menu__close-icon"></div>
                   </a>
                 </div>
                 <a href="#" class="hamburger-menu-link" id="button">
@@ -73,7 +71,7 @@
           </div>
         </div>
         <a href="#" class="arrow-scroll">
-          <img src="img/content/arrow-scroll.png" class="arrow-scroll-img" alt="scroll">
+          <img src="img/content/arrow-scroll.png" class="arrow-scroll__img" alt="scroll">
         </a>
       </section>
       <section class="section best section__centered">
@@ -173,89 +171,98 @@
         </div>
       </section>
       <section class="section team">
-        <div class="container team__container">
-          <div class="team__content">
-            <h2 class="section-title">
-              Команда
-            </h2>
-            <ul class="team-acco">
-              <li class="team-acco__item">
-                <a href="#" class="team-acco__trigger">Дэниел Редклиф</a>
-                <div class="team-acco__content">
-                  <div class="team-acco__avatar">
-                    <div class="team-acco__img" style="background-image:url(img/content/aphex.jpg)"></div>
-                  </div>
-                  <div class="team-acco__text">
-                    <div class="team-acco__text-title">Оператор</div>
-                    <div class="team-acco__text-content">
-                      <p>
-                        С радостью поможет подобрать идеальный бургер и оформить заказ.
-                      </p>
-                    </div>
+        <div class="team__content">
+          <h2 class="section-title">
+            Команда
+          </h2>
+          <ul class="team-acco">
+            <li class="team-acco__item">
+              <a href="#" class="team-acco__trigger">Дэниел Редклиф</a>
+              <div class="team-acco__content">
+                <div class="team-acco__avatar">
+                  <div class="team-acco__img" style="background-image:url(img/content/aphex.jpg)">
+                    <img src="img/content/aphex.jpg" alt="avatar" class="visuallyhidden">
                   </div>
                 </div>
-              </li>
-              <li class="team-acco__item team-acco__item_active">
-                <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
-                <div class="team-acco__content">
-                  <div class="team-acco__avatar">
-                    <div class="team-acco__img" style="background-image:url(img/content/aphex.jpg)"></div>
-                  </div>
-                  <div class="team-acco__text">
-                    <div class="team-acco__text-title">Оператор</div>
-                    <div class="team-acco__text-content">
-                      <p>
-                        С радостью поможет подобрать идеальный бургер и оформить заказ.
-                      </p>
-                    </div>
+                <div class="team-acco__text">
+                  <div class="team-acco__text-title">Оператор</div>
+                  <div class="team-acco__text-content">
+                    <p>
+                      С радостью поможет подобрать идеальный бургер и оформить заказ.
+                    </p>
                   </div>
                 </div>
-              </li>
-              <li class="team-acco__item">
-                <a href="#" class="team-acco__trigger">Джейк Финн</a>
-                <div class="team-acco__content">
-                  <div class="team-acco__avatar">
-                    <div class="team-acco__img" style="background-image:url(img/content/aphex.jpg)"></div>
-                  </div>
-                  <div class="team-acco__text">
-                    <div class="team-acco__text-title">Оператор</div>
-                    <div class="team-acco__text-content">
-                      <p>
-                        С радостью поможет подобрать идеальный бургер и оформить заказ.
-                      </p>
-                    </div>
+              </div>
+            </li>
+            <li class="team-acco__item team-acco__item_active">
+              <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
+              <div class="team-acco__content">
+                <div class="team-acco__avatar">
+                  <div class="team-acco__img" style="background-image:url(img/content/aphex.jpg)">
+                    <img src="img/content/aphex.jpg" alt="avatar" class="visuallyhidden">
                   </div>
                 </div>
-              </li>
-              <li class="team-acco__item">
-                <a href="#" class="team-acco__trigger">Николай Иванов</a>
-                <div class="team-acco__content">
-                  <div class="team-acco__avatar">
-                    <div class="team-acco__img" style="background-image:url(img/content/aphex.jpg)"></div>
-                  </div>
-                  <div class="team-acco__text">
-                    <div class="team-acco__text-title">Оператор</div>
-                    <div class="team-acco__text-content">
-                      <p>
-                        С радостью поможет подобрать идеальный бургер и оформить заказ.
-                      </p>
-                    </div>
+                <div class="team-acco__text">
+                  <div class="team-acco__text-title">Оператор</div>
+                  <div class="team-acco__text-content">
+                    <p>
+                      С радостью поможет подобрать идеальный бургер и оформить заказ.
+                    </p>
                   </div>
                 </div>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+            <li class="team-acco__item">
+              <a href="#" class="team-acco__trigger">Джейк Финн</a>
+              <div class="team-acco__content">
+                <div class="team-acco__avatar">
+                  <div class="team-acco__img" style="background-image:url(img/content/aphex.jpg)">
+                    <img src="img/content/aphex.jpg" alt="avatar" class="visuallyhidden">
+                  </div>
+                </div>
+                <div class="team-acco__text">
+                  <div class="team-acco__text-title">Оператор</div>
+                  <div class="team-acco__text-content">
+                    <p>
+                      С радостью поможет подобрать идеальный бургер и оформить заказ.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="team-acco__item">
+              <a href="#" class="team-acco__trigger">Николай Иванов</a>
+              <div class="team-acco__content">
+                <div class="team-acco__avatar">
+                  <div class="team-acco__img" style="background-image:url(img/content/aphex.jpg)">
+                    <img src="img/content/aphex.jpg" alt="avatar" class="visuallyhidden">
+                  </div>
+                </div>
+                <div class="team-acco__text">
+                  <div class="team-acco__text-title">Оператор</div>
+                  <div class="team-acco__text-content">
+                    <p>
+                      С радостью поможет подобрать идеальный бургер и оформить заказ.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="section menu">
         <h2 class="section-title section-title_color_white section-title_margin-left menu__title">Меню</h2>
-        <ul class="menu-acco">
-          <li class="menu-acco__item menu-acco__item_active">
-            <a class="menu-acco__trigger" href="#" style="background-image: url('img/content/meat-small.jpg')">
+        <ul class="menu-acco menu-acco" id="menu-acco">
+          <li class="menu-acco__item menu-acco__item" id="menu-item">
+            <a class="menu-acco__trigger" id="menu-trigger" href="#" style="background-image: url('img/content/meat-small.jpg')">
               <div class="menu-acco__trigger-text">Для мясоедов</div>
             </a>
             <div class="menu-acco__content">
               <div class="menu-acco__text">
+                <a href="#" class="menu__close" id="menu-close">
+                  <div class="menu__close-icon"></div>
+                </a>
                 <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
 Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
                 </p>
@@ -263,11 +270,14 @@
             </div>
           </li>
           <li class="menu-acco__item">
-            <a class="menu-acco__trigger" href="#" style="background-image: url('img/content/vegan-small.jpg')">
+            <a class="menu-acco__trigger"  href="#" style="background-image: url('img/content/vegan-small.jpg')">
               <div class="menu-acco__trigger-text">Вегетарианское</div>
             </a>
             <div class="menu-acco__content">
               <div class="menu-acco__text">
+                <a href="#" class="menu__close" id="menu-close">
+                  <div class="menu__close-icon"></div>
+                </a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae corporis nulla, provident soluta, voluptas magni voluptates in aut quas dolorem quam ex earum perspiciatis porro saepe possimus, optio, facere et.</p>
               </div>
             </div>
@@ -278,6 +288,9 @@
             </a>
             <div class="menu-acco__content">
               <div class="menu-acco__text">
+                <a href="#" class="menu__close" id="menu-close">
+                  <div class="menu__close-icon"></div>
+                </a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non alias, deleniti vitae, aliquam autem eligendi laboriosam? Ex molestias incidunt, dignissimos, et fugit voluptatum laudantium rem laboriosam, eius ad aliquam facere.</p>
               </div>
             </div>
@@ -445,24 +458,32 @@
               <div class="footer__socials socials">
                 <ul class="socials__list">
                   <li class="socials__item">
-                    <svg class="socials__icon">
-                      <use xlink:href="img/icons/sprite.svg#vk"></use>
-                    </svg>
+                    <a href="#" class="socials__link">
+                      <svg class="socials__icon">
+                        <use xlink:href="img/icons/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="socials__item">
-                    <svg class="socials__icon">
-                      <use xlink:href="img/icons/sprite.svg#fb"></use>
-                    </svg>
+                    <a href="#" class="socials__link">
+                      <svg class="socials__icon">
+                        <use xlink:href="img/icons/sprite.svg#fb"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="socials__item">
-                    <svg class="socials__icon">
-                      <use xlink:href="img/icons/sprite.svg#inst"></use>
-                    </svg>
+                    <a href="#" class="socials__link">
+                      <svg class="socials__icon">
+                        <use xlink:href="img/icons/sprite.svg#inst"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="socials__item">
-                    <svg class="socials__icon">
-                      <use xlink:href="img/icons/sprite.svg#twitter"></use>
-                    </svg>
+                    <a href="#" class="socials__link">
+                      <svg class="socials__icon">
+                        <use xlink:href="img/icons/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -475,14 +496,14 @@
 
   <section class="pagination">
     <ul class="pag__list">
-      <li class="pag__item"></li>
-      <li class="pag__item"></li>
-      <li class="pag__item"></li>
-      <li class="pag__item"></li>
-      <li class="pag__item"></li>
-      <li class="pag__item"></li>
-      <li class="pag__item"></li>
-      <li class="pag__item"></li>
+      <li class="pag__item pag__item_active"><a href="#" class="pag__link"></a></li>
+      <li class="pag__item"><a href="#" class="pag__link"></a></li>
+      <li class="pag__item"><a href="#" class="pag__link"></a></li>
+      <li class="pag__item"><a href="#" class="pag__link"></a></li>
+      <li class="pag__item"><a href="#" class="pag__link"></a></li>
+      <li class="pag__item"><a href="#" class="pag__link"></a></li>
+      <li class="pag__item"><a href="#" class="pag__link"></a></li>
+      <li class="pag__item"><a href="#" class="pag__link"></a></li>
     </ul>
   </section>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">

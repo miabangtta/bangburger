@@ -68,6 +68,11 @@
  &:hover {
   fill: #fff;
   }
+  @include phones {
+    margin-top: rem(1px);
+    width: rem(17px);
+    height: rem(17px);
+  }
 }
 
 .socials__item {

@@ -33,6 +33,7 @@ myMap.geoObjects.add(myCollection);
 
 };
 
+// hamburger-menu
 
 var menu = document.getElementById('menu')
 var button = document.getElementById('button')
@@ -44,4 +45,22 @@ button.addEventListener('click', function() {
 
 close.addEventListener('click', function() {
  menu.classList.remove('hamburger-menu_visible')
+});
+
+//menu
+var triggerMenu = document.getElementById('menu-trigger')
+var itemMenu = document.getElementById('menu-item')
+var accoMenu = document.getElementById('menu-acco')
+var closeMenu = document.getElementById('menu-close')
+
+triggerMenu.addEventListener('click', function() {
+  event.preventDefault()
+  itemMenu.classList.add('menu__item_active')
+  accoMenu.classList.add('menu__acco_active')
+})
+
+closeMenu.addEventListener('click', function() {
+  event.preventDefault()
+  itemMenu.classList.remove('menu__item_active')
+  accoMenu.classList.remove('menu__acco_active')
 });

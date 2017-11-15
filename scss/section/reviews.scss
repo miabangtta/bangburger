@@ -38,7 +38,7 @@
     text-align: center;
     font-size: rem(14px);
     line-height: rem(24px);
-    padding: 1rem 2rem;
+    padding: 0.5rem 0.5rem;
   }
 
   @include phones {
@@ -68,10 +68,10 @@
   line-height: 1.42;
   font-size: rem(14px);
   font-family: "ubuntulight", sans-serif;
-  margin-bottom: 3rem;
+  margin-bottom: 7%;
 
   @include tablets {
-    margin-bottom: rem(17px);
+    line-height: 1.1;
   }
 
   @include phones {
