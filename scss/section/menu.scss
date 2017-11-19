@@ -17,7 +17,7 @@
   display: flex;
 
   &_active {
-    @include phones {
+    @include tablets {
       left: 0;
     }
   }
@@ -89,8 +89,8 @@
     }
 
     .menu-acco__content {
-      width: rem(540px);
-      }
+      width: rem(510px);
+    }
 
     @include phones {
       position: absolute;

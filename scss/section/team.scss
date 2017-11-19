@@ -77,7 +77,8 @@
 
 .team-acco__content {
   margin-bottom: 1%;
-  display: none;
+  height: 0;
+  overflow: hidden;
   font-family: "ubuntulight";
   margin-bottom: 0.6rem;
 
@@ -139,6 +140,7 @@
     .team-acco__content {
       display: flex;
       flex-direction: row;
+      height: 100%;
 
       @include tablets {
         flex-direction: column;

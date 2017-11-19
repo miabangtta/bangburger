@@ -1146,12 +1146,27 @@ ul {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  width: 30%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 1.25rem; }
+
+.review-popup__author {
+  font-family: "gagalin", sans-serif;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .review-popup__author {
+      margin-bottom: 0.625rem; } }
+  @media screen and (max-width: 480px) {
+    .review-popup__author {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem; } }
 
 .review-popup__close {
+  width: 40%;
   display: inline-block;
   right: 0;
   top: 0.9375rem;
@@ -1270,7 +1285,8 @@ ul {
 
 .team-acco__content {
   margin-bottom: 1%;
-  display: none;
+  height: 0;
+  overflow: hidden;
   font-family: "ubuntulight";
   margin-bottom: 0.6rem; }
   @media screen and (max-width: 768px) {
@@ -1333,7 +1349,8 @@ ul {
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  height: 100%; }
   @media screen and (max-width: 768px) {
     .team-acco__item_active .team-acco__content {
       -webkit-box-orient: vertical;
@@ -1361,7 +1378,7 @@ ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     .menu-acco_active {
       left: 0; } }
 
@@ -1430,7 +1447,7 @@ ul {
   .menu-acco__item_active .menu-acco__trigger-text {
     color: #f8b43a; }
   .menu-acco__item_active .menu-acco__content {
-    width: 33.75rem; }
+    width: 31.875rem; }
   @media screen and (max-width: 480px) {
     .menu-acco__item_active {
       position: absolute;

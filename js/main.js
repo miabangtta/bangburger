@@ -1,7 +1,4 @@
-
-
-
-//accordion
+//accordion team
 $(function() {
   $(".team-acco__item").on('click', e => {
 
@@ -10,8 +7,6 @@ $(function() {
      accoItem.toggleClass('team-acco__item_active').siblings().removeClass('team-acco__item_active');
    });
 });
-
-
 
 // hamburger-menu
 $(function() {
@@ -26,30 +21,19 @@ $(function() {
   close.on('click', e => {
    menu.removeClass('hamburger-menu_visible')
   });
+
 });
 
 //menu
 $(function() {
-  let triggerMenu = $('#menu-trigger')
-  let itemMenu = $('#menu-item')
-  let accoMenu = $('#menu-acco')
+  let triggerMenu = $('.menu-acco__trigger')
+  let itemMenu = $('.menu-acco__item')
+  let accoMenu = $('.menu-acco')
   let closeMenu = $('#menu-close')
 
   triggerMenu.on('click', e => {
-    event.preventDefault()
-    itemMenu.addClass('menu__item_active')
-    accoMenu.addClass('menu__acco_active')
-  });
-
-  closeMenu.on('click', e => {
-    event.preventDefault()
-    itemMenu.removeClass('menu__item_active')
-    accoMenu.removeClass('menu__acco_active')
-  });
-
-  $("itemMenu").on('click', e => {
     e.preventDefault()
-    $('itemMenu').toggleClass('menu-acco__item_active').siblings()
+  $(e.target).closest(itemMenu).toggleClass('menu-acco__item_active').siblings().removeClass('menu-acco__item_active');
 
   })
 });
@@ -93,41 +77,31 @@ $(function() {
   });
 
 //popup
-$(function() {
+  $(function() {
+    let popup = $('.review-popup')
+    let authorText = $('.reviews__author')
+    let contentText = $('.reviews__content')
+    let authorPopup = $('.review-popup__author')
+    let contentPopup = $('.review-popup__content')
+    let button = $('.reviews__button')
+    let close = $('.review-popup__close')
 
-  let authorText = $('.reviews__author')
-  let contentText = $('.reviews__content')
-  let authorPopup = $('.review-popup__author')
-  let contentPopup = $('.review-popup__content')
-  let button = $('.reviews__button')
-  let close = $('.review-popup__close')
+    $('.reviews__item').on('click', e =>  {
+        let target = $(e.target).closest('.reviews__item')
+        let title = $(target).children().find('.reviews__author').text()
+        let content = $(target).children().find('.reviews__content').text()
 
-$.on('click', e =>  {
-  let target = e.target,
-  		index = null,
-      content = null
+        $('.review-popup__head').text(title)
+        $('.review-popup__text').text(content);
+  	  popup.addClass('review-popup_visible');
+    });
 
-      if (target.dataset.index) {
-   index = target.dataset.index;
-   [...list].forEach(item => {
-     if (item.dataset.index == index) {
-       let text = item.innerText
-       authorPopup.value = text
-     }
-   })
- }
-});
-
-  button.on('click', e => {
-    e.preventDefault()
-    popup.addClass('review-popup_visible');
+    close.on('click', e => {
+      e.preventDefault()
+      popup.removeClass('review-popup_visible');
+    });
   });
 
-  close.on('click', e => {
-    e.preventDefault()
-    popup.removeClass('review-popup_visible');
-  });
-});
 
 //карта
 $(function() {
