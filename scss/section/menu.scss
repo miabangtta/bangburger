@@ -57,10 +57,9 @@
 }
 
 .menu-acco__content {
-  width: rem(540px);
+  width: 0;
   background-color: rgba($dark, .93);
   height: 100%;
-  width: 0;
   float: left;
   overflow: hidden;
 }
@@ -72,7 +71,7 @@
   font-size: rem(14px);
   width: 100%;
   line-height: 1.8;
-  display: none;
+  display: flex;
   @include phones {
     font-size: rem(14px);
   }
@@ -89,17 +88,9 @@
       color: $yellow;
     }
 
-    .menu-acco__text {
-      display: flex;
-      }
-
     .menu-acco__content {
-      width: rem(500px);
-
-      // @include phones {
-      //   width: rem(280px);
-      // }
-    }
+      width: rem(540px);
+      }
 
     @include phones {
       position: absolute;
@@ -126,7 +117,6 @@
             }
     }
   }
-
 }
 
 

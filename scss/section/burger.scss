@@ -7,25 +7,34 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
 
-	.section-title {
-		margin-bottom: rem(15px);
-		color: #fff;
+.section-title__burger {
+	margin-bottom: 3.125rem;
+	color: #fff;
+	line-height: 1;
 
-		@include tablets {
-			line-height: 1;
-		}
+	@include tablets {
+		margin-bottom: rem(20px);
+		text-align: center;
+		font-size: rem(60px);
+	}
+
+	@include phones {
+		font-size: rem(50px);
+		margin-bottom: 0;
 	}
 }
 
 .burger-slider {
 	display: flex;
 	width: 100%;
+	max-height: 90%;
 	align-items: center;
 	justify-content: center;
 }
 
-.burger-slider__beef {
+.burger-slider__beef, .burger-slider__beef-1, .burger-slider__beef-2 {
 	display: flex;
 	width: 100%;
 	flex-direction: row;
@@ -34,6 +43,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		position: relative;
 		width: 60%;
 	}
 
@@ -51,13 +61,18 @@
 
 	@include tablets {
 		width: 100%;
-		max-height: 100vh;
+		position: initial;
 	}
 }
 
 .burger__image-img {
 	width: 100%;
 	margin-top: rem(50px);
+	margin-bottom: rem(25px);
+
+	@include tablets {
+		margin-bottom: 0;
+	}
 }
 
 .burger__content {
@@ -65,6 +80,8 @@
 	color: #fff;
 	font-family: 'ubuntulight';
 	font-size: rem(14px);
+	display: flex;
+	flex-direction: column;
 
 	@include tablets {
 		text-align: center;
@@ -84,6 +101,7 @@
 	border-radius: rem(5px);
 	left: 0;
 	top: 0;
+	cursor: pointer;
 }
 
 .burger__small-text {
@@ -129,15 +147,6 @@
 	}
 }
 
-.burger__title {
-	line-height: 1;
-	margin-bottom: rem(50px);
-
-	@include tablets {
-		text-align: center;
-	}
-}
-
 .burger__price {
 	color: $orange;
 	font-family: 'gagalin', Arial, sans-serif;
@@ -175,6 +184,7 @@
 	cursor: pointer;
 	transition: 0.3s;
 	margin-left: rem(25px);
+	border: none;
 	&:hover {
 		background-color: #c1401e;
 	}
@@ -195,6 +205,7 @@
 	transform: rotate(90deg);
 	left: rem(10px);
 	vertical-align: middle;
+	cursor: pointer;
 
 	&:hover {
 		.burger__scroll-p-icon {
@@ -209,6 +220,7 @@
 	position: absolute;
 	transform: rotate(-90deg);
 	right: rem(10px);
+	cursor: pointer;
 
 	&:hover {
 		.burger__scroll-n-icon {

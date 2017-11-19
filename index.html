@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" href="./img/content/logo.png" sizes="16x16">
   <script src="js/svg4everybody.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script>
     svg4everybody();
   </script>
@@ -128,8 +129,8 @@
       </section>
       <section class="section burger">
         <div class="container">
-          <div class="burger-slider">
-            <div class="burger-slider__beef">
+          <ul class="burger-slider">
+            <li class="burger-slider__beef">
               <div class="burger__image">
                 <img src="img/content/beef-burger.png" alt="dark beef burger" class="burger__image-img">
                 <div class="burger__small">
@@ -143,32 +144,79 @@
                 </div>
               </div>
               <div class="burger__content">
-                <div class="burger__title">
-                  <h3 class="section-title">dark beef burger</h3>
-                </div>
+                <h3 class="section-title section-title__burger">dark beef burger</h3>
                 <div class="burger__descr">
                   <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
                 </div>
                 <div class="burger__price">
                   <span class="burger__price_sum">550</span>
                   <span class="burger__price_rub">рублей</span>
-                  <a href="#" class="burger__order-btn">Заказать</a>
+                  <button href="#" class="burger__order-btn">Заказать</button>
                 </div>
               </div>
-            </div>
+            </li>
+            <li class="burger-slider__beef-1">
+              <div class="burger__image">
+                <img src="img/content/beef-burger.png" alt="dark beef burger" class="burger__image-img">
+                <div class="burger__small">
+                  <img src="img/icons/burger.svg" alt="icon" class="burger__small-icon">
+                  <div class="burger__small-text">состав</div>
+                </div>
+                <div class="burger__kkal">
+                  <img src="img/icons/kkal.svg" alt="kkal" class="burger__kkal-icon">
+                  <div class="burger__kkal-num">1200</div>
+                  <div class="burger__kkal-line">ккал</div>
+                </div>
+              </div>
+              <div class="burger__content">
+                <h3 class="section-title section-title__burger">dark beef burger-1</h3>
+                <div class="burger__descr">
+                  <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                </div>
+                <div class="burger__price">
+                  <span class="burger__price_sum">550</span>
+                  <span class="burger__price_rub">рублей</span>
+                  <button href="#" class="burger__order-btn">Заказать</button>
+                </div>
+              </div>
+            </li>
+            <li class="burger-slider__beef-2">
+              <div class="burger__image">
+                <img src="img/content/beef-burger.png" alt="dark beef burger" class="burger__image-img">
+                <div class="burger__small">
+                  <img src="img/icons/burger.svg" alt="icon" class="burger__small-icon">
+                  <div class="burger__small-text">состав</div>
+                </div>
+                <div class="burger__kkal">
+                  <img src="img/icons/kkal.svg" alt="kkal" class="burger__kkal-icon">
+                  <div class="burger__kkal-num">1200</div>
+                  <div class="burger__kkal-line">ккал</div>
+                </div>
+              </div>
+              <div class="burger__content">
+                <h3 class="section-title section-title__burger">dark beef burger-2</h3>
+                <div class="burger__descr">
+                  <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                </div>
+                <div class="burger__price">
+                  <span class="burger__price_sum">550</span>
+                  <span class="burger__price_rub">рублей</span>
+                  <button href="#" class="burger__order-btn">Заказать</button>
+                </div>
+              </div>
+            </li>
 
-
-          </div>
-          <a href="#" class="burger__scroll-prev">
+          </ul>
+          <a class="burger__scroll-prev">
             <img src="img/icons/arrow-scroll.svg" alt="scroll" class="burger__scroll-p-icon">
           </a>
 
-          <a href="#" class="burger__scroll-next">
+          <a class="burger__scroll-next">
             <img src="img/icons/arrow-scroll.svg" alt="scroll" class="burger__scroll-n-icon">
           </a>
 
 
-        </div>
+        </li>
       </section>
       <section class="section team">
         <div class="team__content">
@@ -194,7 +242,7 @@
                 </div>
               </div>
             </li>
-            <li class="team-acco__item team-acco__item_active">
+            <li class="team-acco__item">
               <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
               <div class="team-acco__content">
                 <div class="team-acco__avatar">
@@ -302,61 +350,72 @@
         <ul class="reviews__list">
           <li class="reviews__item" style="background-image:url(img/content/photo-rew1.jpg)">
             <div class="reviews__text">
-              <div class="reviews__author">Рита Виноградова</div>
-              <div class="reviews__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><a href="#" class="reviews__button">Подробнее</a></div>
+              <div class="reviews__author" data-index="0">Рита Виноградова</div>
+              <div class="reviews__content" data-index="0">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+              <div class="reviews__more"><button href="#" class="reviews__button" data-index="0">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew2.jpg)">
             <div class="reviews__text">
-              <div class="reviews__author">Константин Спилберг</div>
-              <div class="reviews__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><a href="#" class="reviews__button">Подробнее</a></div>
+              <div class="reviews__author" data-index="1">Константин Спилберг</div>
+              <div class="reviews__content" data-index="1">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+              <div class="reviews__more"><button href="#" class="reviews__button" data-index="1">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew3.jpg)">
             <div class="reviews__text">
-              <div class="reviews__author">Маша Пичугина</div>
-              <div class="reviews__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><a href="#" class="reviews__button">Подробнее</a></div>
+              <div class="reviews__author" data-index="2">Маша Пичугина</div>
+              <div class="reviews__content" data-index="2">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+              <div class="reviews__more"><button href="#" class="reviews__button" data-index="2">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew4.jpg)">
             <div class="reviews__text">
-              <div class="reviews__author">Андрей Доброписец</div>
-              <div class="reviews__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><a href="#" class="reviews__button">Подробнее</a></div>
+              <div class="reviews__author" data-index="3">Андрей Доброписец</div>
+              <div class="reviews__content" data-index="3">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+              <div class="reviews__more"><button href="#" class="reviews__button" data-index="3">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item"  style="background-image:url(img/content/photo-rew5.jpg)">
             <div class="reviews__text">
-              <div class="reviews__author">Юрий Мыслеход</div>
-              <div class="reviews__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><a href="#" class="reviews__button">Подробнее</a></div>
+              <div class="reviews__author" data-index="4">Юрий Мыслеход</div>
+              <div class="reviews__content" data-index="4">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+              <div class="reviews__more"><button data-index="4" href="#" class="reviews__button">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew6.jpg)">
             <div class="reviews__text">
-              <div class="reviews__author">Елена Зырянова</div>
-              <div class="reviews__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><a href="#" class="reviews__button">Подробнее</a></div>
+              <div class="reviews__author" data-index="5">Елена Зырянова</div>
+              <div class="reviews__content" data-index="5">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+              <div class="reviews__more"><button href="#" class="reviews__button" data-index="5">Подробнее</button></div>
             </div>
           </li>
-          <li class="reviews__item"  style="background-image:url(img/content/photo-rew7.jpg)">
+          <li class="reviews__item" style="background-image:url(img/content/photo-rew7.jpg)">
             <div class="reviews__text">
-              <div class="reviews__author">Дэвид Сандерс</div>
-              <div class="reviews__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><a href="#" class="reviews__button">Подробнее</a></div>
+              <div class="reviews__author" data-index="6">Дэвид Сандерс</div>
+              <div class="reviews__content" data-index="6">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+              <div class="reviews__more"><button href="#" class="reviews__button" data-index="6">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew8.jpg)">
             <div class="reviews__text">
-              <div class="reviews__author">Георгий Южный</div>
-              <div class="reviews__content">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><a href="#" class="reviews__button">Подробнее</a></div>
+              <div class="reviews__author" data-index="7">Георгий Южный</div>
+              <div class="reviews__content" data-index="7">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+              <div class="reviews__more"><button href="#" class="reviews__button" data-index="7">Подробнее</button></div>
             </div>
           </li>
         </ul>
+        <div class="review-popup">
+          <div class="review-popup__block">
+            <div class="review-popup__head">
+              <div class="review-popup__author"></div>
+              <a class="review-popup__close">
+                <img src="/img/icons/close.svg" alt="close" class="review-popup__close-img">
+              </a>
+            </div>
+            <div class="review-popup__text"></div>
+          </div>
+        </div>
       </section>
       <section class="section order section_centered">
         <div class="container">
@@ -491,7 +550,7 @@
           </footer>
         </div>
       </section>
-    </div>
+    </ul>
   </div>
 
   <section class="pagination">
@@ -506,8 +565,8 @@
       <li class="pag__item"><a href="#" class="pag__link"></a></li>
     </ul>
   </section>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
-</script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

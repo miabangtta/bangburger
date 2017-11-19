@@ -1,6 +1,7 @@
 .reviews {
   display: flex;
   flex-flow: row wrap;
+  position: relative;
 }
 
 .reviews__list {
@@ -81,6 +82,7 @@
 
 .reviews__button {
   color: #fff;
+  border: none;
   text-transform: uppercase;
   text-decoration: none;
   font-size: rem(13px);
@@ -90,5 +92,62 @@
   transition: .4s;
   &:hover {
     background-color: #000;
+  }
+}
+
+// popup
+
+.review-popup {
+  position: fixed;
+  background: rgba(#2f3234, .93);
+  display: none;
+  align-items: center;
+	justify-content: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &_visible {
+    display: flex;
+  }
+}
+
+.review-popup__block {
+  width: 50%;
+  height: 60%;
+  max-height: 90%;
+  background-color: #FFF;
+  border-radius: rem(5px);
+  padding: rem(20px) rem(20px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    width: 80%;
+  }
+
+  @include phones {
+    width: 95%;
+  }
+}
+
+.review-popup__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.review-popup__close {
+  display: inline-block;
+  right: 0;
+  top: rem(15px);
+  opacity: .7;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
   }
 }
