@@ -120,7 +120,7 @@
   max-height: 90%;
   background-color: #FFF;
   border-radius: rem(5px);
-  padding: rem(20px) rem(20px);
+  padding: rem(25px) rem(20px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -137,28 +137,31 @@
 .review-popup__head {
   display: flex;
   flex-direction: row;
-  width: 30%;
   justify-content: space-between;
   margin-bottom: rem(20px);
 }
 
 .review-popup__author {
   font-family: "gagalin", sans-serif;
-  font-size: rem(14px);
+  font-size: rem(16px);
   margin-bottom: rem(20px);
 
   @include tablets {
     margin-bottom: rem(10px);
   }
+}
 
-  @include phones {
-    font-size: rem(24px);
-    margin-bottom: rem(24px);
+.review-popup__text {
+  line-height: 1.42;
+  font-size: rem(14px);
+  font-family: "ubuntulight", sans-serif;
+
+  @include tablets {
+    line-height: 1.1;
   }
 }
 
 .review-popup__close {
-  width: 40%;
   display: inline-block;
   right: 0;
   top: rem(15px);

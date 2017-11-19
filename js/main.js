@@ -39,7 +39,6 @@ $(function() {
 });
 
 // slider
-
 $(function() {
   let sliderWrapper = $('.burger-slider');
   let objects = sliderWrapper.children();
@@ -57,7 +56,6 @@ $(function() {
     currentSlide = getNumber(currentSlide + 1);
     objects[currentSlide].style.display = "flex";
   });
-
 
   buttonPrev.on("click", e => {
     objects[currentSlide].style.display = "none";
@@ -77,31 +75,30 @@ $(function() {
   });
 
 //popup
-  $(function() {
-    let popup = $('.review-popup')
-    let authorText = $('.reviews__author')
-    let contentText = $('.reviews__content')
-    let authorPopup = $('.review-popup__author')
-    let contentPopup = $('.review-popup__content')
-    let button = $('.reviews__button')
-    let close = $('.review-popup__close')
+$(function() {
+  let popup = $('.review-popup')
+  let authorText = $('.reviews__author')
+  let contentText = $('.reviews__content')
+  let authorPopup = $('.review-popup__author')
+  let contentPopup = $('.review-popup__content')
+  let button = $('.reviews__button')
+  let close = $('.review-popup__close')
 
-    $('.reviews__item').on('click', e =>  {
-        let target = $(e.target).closest('.reviews__item')
-        let title = $(target).children().find('.reviews__author').text()
-        let content = $(target).children().find('.reviews__content').text()
+  $('.reviews__button').on('click', e => {
+    let target = $(e.target).closest('.reviews__item')
+    let title = $(target).children().find('.reviews__author').text()
+    let content = $(target).children().find('.reviews__content').text()
 
-        $('.review-popup__head').text(title)
-        $('.review-popup__text').text(content);
-  	  popup.addClass('review-popup_visible');
-    });
-
-    close.on('click', e => {
-      e.preventDefault()
-      popup.removeClass('review-popup_visible');
-    });
+    $('.review-popup__author').text(title)
+    $('.review-popup__text').text(content);
+	  popup.addClass('review-popup_visible');
   });
 
+  close.on('click', e => {
+    e.preventDefault()
+    popup.removeClass('review-popup_visible');
+  });
+});
 
 //карта
 $(function() {
