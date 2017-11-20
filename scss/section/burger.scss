@@ -109,7 +109,7 @@
 
 		.burger-comp {
 			opacity: 1;
-			right: rem(-20px);
+				left: rem(95px);
 		}
 	}
 }
@@ -121,7 +121,7 @@
 }
 
 .burger-comp {
-	right: 9999px;
+	left: -9999px;
 	position: absolute;
 	opacity: 0;
 	transition: opacity .3s;
@@ -129,6 +129,8 @@
 	flex-direction: column;
 	background: rgba(white, .9);
 	border-radius: rem(5px);
+	z-index: 300;
+	top: rem(5px);
 }
 
 .burger-comp__row {
@@ -232,6 +234,7 @@
 	left: rem(10px);
 	vertical-align: middle;
 	cursor: pointer;
+	z-index: 301;
 
 	&:hover {
 		.burger__scroll-p-icon {
@@ -247,6 +250,7 @@
 	transform: rotate(-90deg);
 	right: rem(10px);
 	cursor: pointer;
+	z-index: 301;
 
 	&:hover {
 		.burger__scroll-n-icon {

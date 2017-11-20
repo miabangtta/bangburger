@@ -882,7 +882,7 @@ ul {
     background-color: #e35028; }
     .burger__small:hover .burger-comp {
       opacity: 1;
-      right: -1.25rem; }
+      left: 5.9375rem; }
 
 .burger__small-text {
   font-size: 0.875rem;
@@ -890,7 +890,7 @@ ul {
   color: #fff; }
 
 .burger-comp {
-  right: 9999px;
+  left: -9999px;
   position: absolute;
   opacity: 0;
   -webkit-transition: opacity .3s;
@@ -906,7 +906,9 @@ ul {
   -ms-flex-direction: column;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 0.3125rem; }
+  border-radius: 0.3125rem;
+  z-index: 300;
+  top: 0.3125rem; }
 
 .burger-comp__row {
   display: -webkit-box;
@@ -1003,7 +1005,8 @@ ul {
   transform: rotate(90deg);
   left: 0.625rem;
   vertical-align: middle;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 301; }
   .burger__scroll-prev:hover .burger__scroll-p-icon use {
     fill: #fff; }
 
@@ -1013,7 +1016,8 @@ ul {
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   right: 0.625rem;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 301; }
   .burger__scroll-next:hover .burger__scroll-n-icon use {
     fill: #fff; }
 
