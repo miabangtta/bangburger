@@ -55,6 +55,7 @@
     border-top-color: $yellow;
     border-bottom-width: 0;
     margin-right: 0.4rem;
+    transition: .3s;
     }
 
   &:hover {
@@ -80,8 +81,12 @@
   overflow: hidden;
   font-family: "ubuntulight";
   margin-bottom: 0.6rem;
+  display: flex;
+  flex-direction: row;
 
   @include tablets {
+    flex-direction: column;
+    text-align: center;
     text-align: center;
     align-items: center;
   }
@@ -133,17 +138,6 @@
     margin-bottom: 1rem;
     &:before {
       transform: rotate(-180deg);
-      }
-    }
-
-  .team-acco__content {
-    display: flex;
-    flex-direction: row;
-    // height: 100%;
-
-    @include tablets {
-      flex-direction: column;
-      text-align: center;
     }
   }
 }

@@ -29,19 +29,19 @@ $(function() {
        items.removeClass('team-acco__item_active')
        item.addClass('team-acco__item_active')
 
-       otherContent.css({
-         'height': 0
-       })
+       otherContent.stop(true, true).animate({
+         'height': 0 }, 0
+       )
 
-       content.css({
-         'height': "100%"
-       })
+       content.stop(true, true).animate({
+         'height': "100%" }, 600, () => { content.fadeIn()
+         })
 
      } else {
        item.removeClass('team-acco__item_active');
-       content.css({
-         'height': 0
-       })
+       content.stop(true, true).animate({
+         'height': 0}, 350
+       )
      };
    });
 });
@@ -54,7 +54,7 @@ $(function() {
   let closeMenu = $('#menu-close')
 
 
-$('.menu-acco__trigger').on('click', e => {
+  $('.menu-acco__trigger').on('click', e => {
 
   e.preventDefault()
 
@@ -75,30 +75,30 @@ $('.menu-acco__trigger').on('click', e => {
     items.removeClass('menu-acco__item_active')
     item.addClass('menu-acco__item_active')
 
-    otherContent.css({
+    otherContent.animate({
       'width': 0
     })
 
     if (window.matchMedia("(max-width: 768px)").matches) {
-      content.css({
+      content.animate({
         'width': reqWidthTablets + 'px'})
-    }
-     else if (window.matchMedia("(max-width: 480px)").matches) {
-       content.css({
+    } else if (window.matchMedia("(max-width: 480px)").matches) {
+       content.animate({
          'width': reqWidthMobiles + 'px'
        })
        item.siblings().css({
          'width' : 0
        });
     } else {
-      content.css({
-        'width': reqWidthDesktop + 'px'})
+      content.stop(true).animate({
+        'width': reqWidthDesktop + 'px'}, 750, () => { textBlock.fadeIn()
+        });
     };
 
   } else {
     item.removeClass('menu-acco__item_active');
-    content.css({
-      'width': 0
+    content.stop(true).animate({
+      'width': 0 }, 750, () => { textBlock.fadeOut()
     })
 
     // if (window.matchMedia("(max-width: 480px)").matches) {
@@ -107,15 +107,6 @@ $('.menu-acco__trigger').on('click', e => {
   };
 });
 });
-
-    //////////
-//
-
-//
-//   // $(e.target).closest(itemMenu).toggleClass('menu-acco__item_active').siblings().removeClass('menu-acco__item_active');
-//
-//   })
-// });
 
 // slider
 $(function() {
@@ -127,20 +118,21 @@ $(function() {
   let currentSlide = 0;
 
   for(object of objects){
-    object.style.display = "none";
-  }
-  objects[0].style.display = "flex";
-  buttonNext.on("click", e => {
-    objects[currentSlide].style.display = "none";
-    currentSlide = getNumber(currentSlide + 1);
-    objects[currentSlide].style.display = "flex";
-  });
+    $(object).css({display:"none"});
+ }
+ $(objects[0]).css({display:"flex"});
+ buttonNext.on("click", e => {
+   $(objects[currentSlide]).css({display:"none"});
+   currentSlide = getNumber(currentSlide + 1);
+   $(objects[currentSlide]).css({display:"flex"});
+ });
 
-  buttonPrev.on("click", e => {
-    objects[currentSlide].style.display = "none";
-    currentSlide = getNumber(currentSlide - 1);
-    objects[currentSlide].style.display = "flex";
-  });
+ buttonPrev.on("click", e => {
+   $(objects[currentSlide]).css({display:"none"});
+   currentSlide = getNumber(currentSlide - 1);
+     $(objects[currentSlide]).css({display:"flex"});
+ });
+
 
   function getNumber(num){
     if (num === -1) {

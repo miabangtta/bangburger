@@ -1323,7 +1323,10 @@ ul {
     border: 0.3125rem solid transparent;
     border-top-color: #f8b43a;
     border-bottom-width: 0;
-    margin-right: 0.4rem; }
+    margin-right: 0.4rem;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
   .team-acco__trigger:hover {
     color: #f8b43a; }
   @media screen and (max-width: 768px) {
@@ -1348,9 +1351,24 @@ ul {
   height: 0;
   overflow: hidden;
   font-family: "ubuntulight";
-  margin-bottom: 0.6rem; }
+  margin-bottom: 0.6rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
   @media screen and (max-width: 768px) {
     .team-acco__content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center;
       text-align: center;
       -webkit-box-align: center;
       -webkit-align-items: center;
@@ -1399,25 +1417,6 @@ ul {
     -webkit-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg); }
-
-.team-acco__item_active .team-acco__content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row; }
-  @media screen and (max-width: 768px) {
-    .team-acco__item_active .team-acco__content {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      text-align: center; } }
 
 .menu {
   background: url(../img/bg/menu.jpg) 50% no-repeat;
