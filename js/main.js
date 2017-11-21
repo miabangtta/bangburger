@@ -1,14 +1,4 @@
-//accordion team
-$(function() {
-  $(".team-acco__item").on('click', e => {
-
-     e.preventDefault()
-     const accoItem = $(e.currentTarget);
-     accoItem.toggleClass('team-acco__item_active').siblings().removeClass('team-acco__item_active');
-   });
-});
-
-// hamburger-menu
+//hero-menu
 $(function() {
   let menu = $('#menu')
   let button = $('#button')
@@ -21,22 +11,111 @@ $(function() {
   close.on('click', e => {
    menu.removeClass('hamburger-menu_visible')
   });
-
 });
 
-//menu
+// team-acco
 $(function() {
-  let triggerMenu = $('.menu-acco__trigger')
-  let itemMenu = $('.menu-acco__item')
-  let accoMenu = $('.menu-acco')
+  $(".team-acco__trigger").on('click', e => {
+
+     e.preventDefault()
+     let trigger = $(e.currentTarget);
+     let container = trigger.closest('.team-acco');
+     let item = trigger.closest('.team-acco__item');
+     let content = item.find('.team-acco__content');
+     let otherContent = container.find('.team-acco__content');
+     let items = container.find('.team-acco__item');
+
+     if (!item.hasClass('team-acco__item_active')) {
+       items.removeClass('team-acco__item_active')
+       item.addClass('team-acco__item_active')
+
+       otherContent.css({
+         'height': 0
+       })
+
+       content.css({
+         'height': "100%"
+       })
+
+     } else {
+       item.removeClass('team-acco__item_active');
+       content.css({
+         'height': 0
+       })
+     };
+   });
+});
+
+//menu-acco
+$(function() {
+
+  let item = $('.menu-acco__item')
+  let content = $('.menu-acco')
   let closeMenu = $('#menu-close')
 
-  triggerMenu.on('click', e => {
-    e.preventDefault()
-  $(e.target).closest(itemMenu).toggleClass('menu-acco__item_active').siblings().removeClass('menu-acco__item_active');
 
-  })
+$('.menu-acco__trigger').on('click', e => {
+
+  e.preventDefault()
+
+  let trigger = $(e.currentTarget)
+  let container = trigger.closest('.menu-acco');
+  let item = trigger.closest('.menu-acco__item');
+  let content = item.find('.menu-acco__content');
+  let otherContent = container.find('.menu-acco__content');
+  let items = container.find('.menu-acco__item');
+  let textBlock = $('.menu-acco__text', item);
+  let wWidth = $(window).width();
+  let reqWidthTablets = wWidth - $('.menu-acco__trigger').outerWidth*3;
+  let reqWidthMobiles = wWidth - $('.menu-acco__trigger').outerWidth;
+  let reqWidthDesktop = textBlock.outerWidth();
+
+
+  if (!item.hasClass('menu-acco__item_active')) {
+    items.removeClass('menu-acco__item_active')
+    item.addClass('menu-acco__item_active')
+
+    otherContent.css({
+      'width': 0
+    })
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      content.css({
+        'width': reqWidthTablets + 'px'})
+    }
+     else if (window.matchMedia("(max-width: 480px)").matches) {
+       content.css({
+         'width': reqWidthMobiles + 'px'
+       })
+       item.siblings().css({
+         'width' : 0
+       });
+    } else {
+      content.css({
+        'width': reqWidthDesktop + 'px'})
+    };
+
+  } else {
+    item.removeClass('menu-acco__item_active');
+    content.css({
+      'width': 0
+    })
+
+    // if (window.matchMedia("(max-width: 480px)").matches) {
+    //     item.siblings().css({ 'width' : '100%'});
+    //   }
+  };
 });
+});
+
+    //////////
+//
+
+//
+//   // $(e.target).closest(itemMenu).toggleClass('menu-acco__item_active').siblings().removeClass('menu-acco__item_active');
+//
+//   })
+// });
 
 // slider
 $(function() {

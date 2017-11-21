@@ -34,7 +34,7 @@
 	justify-content: center;
 }
 
-.burger-slider__beef {
+.burger-slider__item {
 	display: flex;
 	width: 100%;
 	flex-direction: row;
@@ -54,7 +54,6 @@
 
 .burger__image {
 	width: 40%;
-	// position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -109,7 +108,7 @@
 
 		.burger-comp {
 			opacity: 1;
-				left: rem(95px);
+			left: rem(90px);
 		}
 	}
 }
@@ -130,12 +129,34 @@
 	background: rgba(white, .9);
 	border-radius: rem(5px);
 	z-index: 300;
-	top: rem(5px);
+	top: rem(0px);
+	width: rem(270px);
+	padding: rem(15px);
 }
 
 .burger-comp__row {
 	display: flex;
 	flex-direction: row;
+	align-items: center;
+	font-family: "ubuntumedium";
+	font-size: rem(14px);
+	margin-bottom: rem(10px);
+	white-space: nowrap;
+}
+
+.burger-comp__icon {
+	margin-right: rem(15px);
+	text-align: center;
+	width: rem(65px);
+	overflow: hidden;
+}
+
+.burger-comp__item {
+	width: rem(190px);
+}
+
+.burger-comp__weight {
+	text-align: right;
 }
 
 .burger__kkal {

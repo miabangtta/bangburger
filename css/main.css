@@ -771,7 +771,7 @@ ul {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.burger-slider__beef {
+.burger-slider__item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -784,7 +784,7 @@ ul {
   flex-direction: row;
   position: relative; }
   @media screen and (max-width: 768px) {
-    .burger-slider__beef {
+    .burger-slider__item {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
@@ -800,7 +800,7 @@ ul {
       justify-content: center;
       width: 60%; } }
   @media screen and (max-width: 480px) {
-    .burger-slider__beef {
+    .burger-slider__item {
       width: 80%; } }
 
 .burger__image {
@@ -882,7 +882,7 @@ ul {
     background-color: #e35028; }
     .burger__small:hover .burger-comp {
       opacity: 1;
-      left: 5.9375rem; }
+      left: 5.625rem; }
 
 .burger__small-text {
   font-size: 0.875rem;
@@ -908,7 +908,9 @@ ul {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 0.3125rem;
   z-index: 300;
-  top: 0.3125rem; }
+  top: 0rem;
+  width: 16.875rem;
+  padding: 0.9375rem; }
 
 .burger-comp__row {
   display: -webkit-box;
@@ -919,7 +921,27 @@ ul {
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "ubuntumedium";
+  font-size: 0.875rem;
+  margin-bottom: 0.625rem;
+  white-space: nowrap; }
+
+.burger-comp__icon {
+  margin-right: 0.9375rem;
+  text-align: center;
+  width: 4.0625rem;
+  overflow: hidden; }
+
+.burger-comp__item {
+  width: 11.875rem; }
+
+.burger-comp__weight {
+  text-align: right; }
 
 .burger__kkal {
   width: 4.75rem;
@@ -1154,8 +1176,8 @@ ul {
     display: flex; }
 
 .review-popup__block {
-  width: 50%;
-  height: 60%;
+  width: 37%;
+  max-height: 45%;
   max-height: 90%;
   background-color: #FFF;
   border-radius: 0.3125rem;
@@ -1191,15 +1213,11 @@ ul {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 1.25rem; }
+  margin-bottom: 0.9375rem; }
 
 .review-popup__author {
   font-family: "gagalin", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 1.25rem; }
-  @media screen and (max-width: 768px) {
-    .review-popup__author {
-      margin-bottom: 0.625rem; } }
+  font-size: 1rem; }
 
 .review-popup__text {
   line-height: 1.42;
@@ -1327,7 +1345,6 @@ ul {
       font-size: 1.5rem; } }
 
 .team-acco__content {
-  margin-bottom: 1%;
   height: 0;
   overflow: hidden;
   font-family: "ubuntulight";
@@ -1392,8 +1409,7 @@ ul {
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
-  flex-direction: row;
-  height: 100%; }
+  flex-direction: row; }
   @media screen and (max-width: 768px) {
     .team-acco__item_active .team-acco__content {
       -webkit-box-orient: vertical;
@@ -1462,17 +1478,17 @@ ul {
 
 .menu-acco__content {
   width: 0;
+  overflow: hidden;
   background-color: rgba(47, 50, 52, 0.93);
   height: 100%;
-  float: left;
-  overflow: hidden; }
+  float: left; }
 
 .menu-acco__text {
   font-family: "ubuntulight";
   color: #fff;
-  padding: 3.75rem 1.875rem;
+  padding: 1.875rem 1.875rem;
   font-size: 0.875rem;
-  width: 100%;
+  width: 32.4375rem;
   line-height: 1.8;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1486,43 +1502,17 @@ ul {
   height: 100%;
   -webkit-transition: .6s;
   -o-transition: .6s;
-  transition: .6s; }
+  transition: .6s;
+  z-index: 300; }
   .menu-acco__item_active .menu-acco__trigger-text {
     color: #f8b43a; }
   .menu-acco__item_active .menu-acco__content {
-    width: 31.875rem; }
-  @media screen and (max-width: 480px) {
-    .menu-acco__item_active {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 300;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row; }
-      .menu-acco__item_active .menu-acco__trigger {
-        left: 0;
-        width: 15%;
-        display: block; }
-      .menu-acco__item_active .menu-acco__content {
-        width: 85%;
-        display: block;
-        background-color: rgba(47, 50, 52, 0.99); } }
+    width: 100%; }
 
 .menu__close {
   display: none; }
   @media screen and (max-width: 480px) {
     .menu__close {
-      display: block;
       position: absolute;
       right: 2.1875rem;
       top: 2.1875rem;
@@ -1935,7 +1925,8 @@ ul {
 .pagination {
   top: 6.25rem;
   right: 1.875rem;
-  position: fixed; }
+  position: fixed;
+  z-index: 1100; }
   @media screen and (max-width: 768px) {
     .pagination {
       display: none; } }

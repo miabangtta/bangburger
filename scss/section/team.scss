@@ -76,7 +76,6 @@
 }
 
 .team-acco__content {
-  margin-bottom: 1%;
   height: 0;
   overflow: hidden;
   font-family: "ubuntulight";
@@ -137,14 +136,14 @@
       }
     }
 
-    .team-acco__content {
-      display: flex;
-      flex-direction: row;
-      height: 100%;
+  .team-acco__content {
+    display: flex;
+    flex-direction: row;
+    // height: 100%;
 
-      @include tablets {
-        flex-direction: column;
-        text-align: center;
-      }
+    @include tablets {
+      flex-direction: column;
+      text-align: center;
     }
+  }
 }
