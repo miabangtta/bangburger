@@ -9,17 +9,18 @@
   }
 }
 
-.pag__list {
+.pagination__list {
   display: flex;
   flex-direction: column;
 }
 
-.pag__item {
+.pagination__item {
   margin-bottom: rem(16px);
   content: " ";
-  @include circle (rem(5px), #fff);
+  @include circle (0.3625rem, #fff);
+
 }
-.pag__link {
+.pagination__link {
     position: absolute;
     display: block;
     padding: rem(5px);
@@ -30,6 +31,7 @@
     margin-left: rem(-5px);
     cursor: pointer;
 }
-    .pag__item_active .pag__link,   .pag__item:hover .pag__link {
+    .pagination__item_active .pagination__link,
+    .pagination__item:hover .pagination__link {
     border: rem(1px) solid #fff;
 }

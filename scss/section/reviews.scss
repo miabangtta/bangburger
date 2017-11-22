@@ -90,6 +90,7 @@
   background-color: $dark;
   border-radius: rem(7px);
   transition: .4s;
+  cursor: pointer;
   &:hover {
     background-color: #000;
   }
@@ -98,7 +99,7 @@
 // popup
 
 .review-popup {
-  position: fixed;
+  position: absolute;
   background: rgba(#2f3234, .93);
   display: none;
   align-items: center;

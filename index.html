@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" href="./img/content/logo.png" sizes="16x16">
   <script src="js/svg4everybody.js"></script>
-  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
     svg4everybody();
   </script>
@@ -17,7 +17,7 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
-      <section class="section hero">
+      <section class="section hero section_active">
         <div class="container hero__container">
           <header class="header">
             <a href="#" class="hero__logo">
@@ -27,34 +27,34 @@
               <div class="header__menu">
                 <nav class="nav">
                   <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#" data-goto="1">О нас</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#" data-goto="2">Бургеры</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#" data-goto="3">Команда</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#" data-goto="4">Меню</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#" data-goto="5">Отзывы</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#" data-goto="7">Контакты</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#" data-scroll-to="1">О нас</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#" data-scroll-to="2">Бургеры</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#" data-scroll-to="3">Команда</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#" data-scroll-to="4">Меню</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#" data-scroll-to="5">Отзывы</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#" data-scroll-to="7">Контакты</a></li>
                   </ul>
                 </nav>
               </div>
               <div class="header__links">
-                <a href="#" class="header__button" data-goto="6">Заказать</a>
+                <a href="#" class="header__button" data-scroll-to="6">Заказать</a>
                 <div class="hamburger-menu" id="menu">
                   <div class="hamburger-menu__logo">
                     <img src="img/icons/logo.svg" class="hamburger-menu__logo-pic" alt="logo">
                   </div>
                   <ul class="hamburger-menu__list">
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Почему мы</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Меню</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Советы</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Кто мы</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Свяжитесь с нами</a></li>
-                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link">Контакты</a></li>
+                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link" data-scroll-to="1">О нас</a></li>
+                    <li class="hamburger-menu__item"><a href="#section-menu" class="hamburger-menu__link" data-scroll-to="2">Бургеры</a></li>
+                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link" data-scroll-to="3">Команда</a></li>
+                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link" data-scroll-to="4">Меню</a></li>
+                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link" data-scroll-to="5">Отзывы</a></li>
+                    <li class="hamburger-menu__item"><a href="#" class="hamburger-menu__link" data-scroll-to="7">Контакты</a></li>
                   </ul>
-                  <a href="#" class="hamburger-menu__close" id="close">
+                  <a href="#" class="hamburger-menu__close">
                     <div class="hamburger-menu__close-icon"></div>
                   </a>
                 </div>
-                <a href="#" class="hamburger-menu-link" id="button">
+                <a href="#" class="hamburger-menu-link">
                   <div class="hamburger-menu-link__bars"></div>
                 </a>
               </div>
@@ -194,7 +194,7 @@
                 <div class="burger__price">
                   <span class="burger__price_sum">550</span>
                   <span class="burger__price_rub">рублей</span>
-                  <button href="#" class="burger__order-btn">Заказать</button>
+                  <button class="burger__order-btn">Заказать</button>
                 </div>
               </div>
             </li>
@@ -219,7 +219,7 @@
                 <div class="burger__price">
                   <span class="burger__price_sum">450</span>
                   <span class="burger__price_rub">рублей</span>
-                  <button href="#" class="burger__order-btn">Заказать</button>
+                  <button class="burger__order-btn">Заказать</button>
                 </div>
               </div>
             </li>
@@ -244,7 +244,7 @@
                 <div class="burger__price">
                   <span class="burger__price_sum">600</span>
                   <span class="burger__price_rub">рублей</span>
-                  <button href="#" class="burger__order-btn">Заказать</button>
+                  <button class="burger__order-btn">Заказать</button>
                 </div>
               </div>
             </li>
@@ -269,7 +269,7 @@
                 <div class="burger__price">
                   <span class="burger__price_sum">600</span>
                   <span class="burger__price_rub">рублей</span>
-                  <button href="#" class="burger__order-btn">Заказать</button>
+                  <button class="burger__order-btn">Заказать</button>
                 </div>
               </div>
             </li>
@@ -294,7 +294,7 @@
                 <div class="burger__price">
                   <span class="burger__price_sum">700</span>
                   <span class="burger__price_rub">рублей</span>
-                  <button href="#" class="burger__order-btn">Заказать</button>
+                  <button class="burger__order-btn">Заказать</button>
                 </div>
               </div>
             </li>
@@ -305,7 +305,7 @@
           <a class="burger__scroll-next">
             <img src="img/icons/arrow-scroll.svg" alt="scroll" class="burger__scroll-n-icon">
           </a>
-        </li>
+        </div>
       </section>
       <section class="section team">
         <div class="team__content">
@@ -388,7 +388,7 @@
           </ul>
         </div>
       </section>
-      <section class="section menu">
+      <section class="section menu" id="section-menu">
         <h2 class="section-title section-title_color_white section-title_margin-left menu__title">Меню</h2>
         <ul class="menu-acco">
           <li class="menu-acco__item">
@@ -412,9 +412,6 @@
             </a>
             <div class="menu-acco__content">
               <div class="menu-acco__text">
-                <a href="#" class="menu__close" id="menu-close">
-                  <div class="menu__close-icon"></div>
-                </a>
                 <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
                 Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
                 </p>
@@ -427,9 +424,6 @@
             </a>
             <div class="menu-acco__content">
               <div class="menu-acco__text">
-                <a href="#" class="menu__close" id="menu-close">
-                  <div class="menu__close-icon"></div>
-                </a>
                 <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
                 Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
                 </p>
@@ -445,56 +439,56 @@
             <div class="reviews__text">
               <div class="reviews__author" data-index="0">Рита Виноградова</div>
               <div class="reviews__content" data-index="0">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><button href="#" class="reviews__button" data-index="0">Подробнее</button></div>
+              <div class="reviews__more"><button class="reviews__button" data-index="0">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew2.jpg)">
             <div class="reviews__text">
               <div class="reviews__author" data-index="1">Константин Спилберг</div>
               <div class="reviews__content" data-index="1">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><button href="#" class="reviews__button" data-index="1">Подробнее</button></div>
+              <div class="reviews__more"><button class="reviews__button" data-index="1">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew3.jpg)">
             <div class="reviews__text">
               <div class="reviews__author" data-index="2">Маша Пичугина</div>
               <div class="reviews__content" data-index="2">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><button href="#" class="reviews__button" data-index="2">Подробнее</button></div>
+              <div class="reviews__more"><button class="reviews__button" data-index="2">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew4.jpg)">
             <div class="reviews__text">
               <div class="reviews__author" data-index="3">Андрей Доброписец</div>
               <div class="reviews__content" data-index="3">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><button href="#" class="reviews__button" data-index="3">Подробнее</button></div>
+              <div class="reviews__more"><button class="reviews__button" data-index="3">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item"  style="background-image:url(img/content/photo-rew5.jpg)">
             <div class="reviews__text">
               <div class="reviews__author" data-index="4">Юрий Мыслеход</div>
               <div class="reviews__content" data-index="4">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><button data-index="4" href="#" class="reviews__button">Подробнее</button></div>
+              <div class="reviews__more"><button data-index="4" class="reviews__button">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew6.jpg)">
             <div class="reviews__text">
               <div class="reviews__author" data-index="5">Елена Зырянова</div>
               <div class="reviews__content" data-index="5">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><button href="#" class="reviews__button" data-index="5">Подробнее</button></div>
+              <div class="reviews__more"><button class="reviews__button" data-index="5">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew7.jpg)">
             <div class="reviews__text">
               <div class="reviews__author" data-index="6">Дэвид Сандерс</div>
               <div class="reviews__content" data-index="6">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><button href="#" class="reviews__button" data-index="6">Подробнее</button></div>
+              <div class="reviews__more"><button class="reviews__button" data-index="6">Подробнее</button></div>
             </div>
           </li>
           <li class="reviews__item" style="background-image:url(img/content/photo-rew8.jpg)">
             <div class="reviews__text">
               <div class="reviews__author" data-index="7">Георгий Южный</div>
               <div class="reviews__content" data-index="7">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more"><button href="#" class="reviews__button" data-index="7">Подробнее</button></div>
+              <div class="reviews__more"><button class="reviews__button" data-index="7">Подробнее</button></div>
             </div>
           </li>
         </ul>
@@ -643,23 +637,25 @@
           </footer>
         </div>
       </section>
-    </ul>
+    </div>
   </div>
 
   <section class="pagination">
-    <ul class="pag__list">
-      <li class="pag__item pag__item_active"><a href="#" class="pag__link"></a></li>
-      <li class="pag__item"><a href="#" class="pag__link"></a></li>
-      <li class="pag__item"><a href="#" class="pag__link"></a></li>
-      <li class="pag__item"><a href="#" class="pag__link"></a></li>
-      <li class="pag__item"><a href="#" class="pag__link"></a></li>
-      <li class="pag__item"><a href="#" class="pag__link"></a></li>
-      <li class="pag__item"><a href="#" class="pag__link"></a></li>
-      <li class="pag__item"><a href="#" class="pag__link"></a></li>
+    <ul class="pagination__list">
+      <li class="pagination__item pagination__item_active"><a href="#" class="pagination__link" data-scroll-to="0"></a></li>
+      <li class="pagination__item"><a href="#" class="pagination__link" data-scroll-to="1"></a></li>
+      <li class="pagination__item"><a href="#" class="pagination__link" data-scroll-to="2"></a></li>
+      <li class="pagination__item"><a href="#" class="pagination__link" data-scroll-to="3"></a></li>
+      <li class="pagination__item"><a href="#" class="pagination__link" data-scroll-to="4"></a></li>
+      <li class="pagination__item"><a href="#" class="pagination__link" data-scroll-to="5"></a></li>
+      <li class="pagination__item"><a href="#" class="pagination__link" data-scroll-to="6"></a></li>
+      <li class="pagination__item"><a href="#" class="pagination__link" data-scroll-to="7"></a></li>
     </ul>
   </section>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.touchSwipe.min.js"></script>
+<script src="js/mobile-detect.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

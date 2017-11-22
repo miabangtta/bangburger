@@ -1,21 +1,21 @@
 //hero-menu
 $(function() {
-  let menu = $('#menu')
-  let button = $('#button')
-  let close = $('#close')
+  const menuHam = $('.hamburger-menu');
+  const buttonHam = $('.hamburger-menu-link');
+  const closeHam = $('.hamburger-menu__close');
 
-  button.on('click', e => {
-   menu.addClass('hamburger-menu_visible')
+  buttonHam.on('click touchstart', e => {
+   menuHam.addClass('hamburger-menu_visible')
   });
 
-  close.on('click', e => {
-   menu.removeClass('hamburger-menu_visible')
+  closeHam.on('click touchstart', e => {
+   menuHam.removeClass('hamburger-menu_visible')
   });
 });
 
 // team-acco
 $(function() {
-  $(".team-acco__trigger").on('click', e => {
+  $(".team-acco__trigger").on('click touchstart', e => {
 
      e.preventDefault()
      let trigger = $(e.currentTarget);
@@ -54,7 +54,7 @@ $(function() {
   let closeMenu = $('#menu-close')
 
 
-  $('.menu-acco__trigger').on('click', e => {
+  $('.menu-acco__trigger').on('click touchstart', e => {
 
   e.preventDefault()
 
@@ -65,10 +65,15 @@ $(function() {
   let otherContent = container.find('.menu-acco__content');
   let items = container.find('.menu-acco__item');
   let textBlock = $('.menu-acco__text', item);
-  let wWidth = $(window).width();
-  let reqWidthTablets = wWidth - $('.menu-acco__trigger').outerWidth*3;
-  let reqWidthMobiles = wWidth - $('.menu-acco__trigger').outerWidth;
-  let reqWidthDesktop = textBlock.outerWidth();
+  const wWidth = $(window).width();
+  const reqWidthTablets = wWidth - $('.menu-acco__trigger').outerWidth*3;
+  const reqWidthMobiles = wWidth - $('.menu-acco__trigger').outerWidth;
+  const reqWidthDesktop = textBlock.outerWidth();
+
+
+  $( window ).resize(function(calcWidth) {
+   calcWidth =  content.width($( window ).width() - $('.menu-acco__trigger').outerWidth*3);
+  });
 
 
   if (!item.hasClass('menu-acco__item_active')) {
@@ -79,21 +84,23 @@ $(function() {
       'width': 0
     })
 
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      content.animate({
-        'width': reqWidthTablets + 'px'})
-    } else if (window.matchMedia("(max-width: 480px)").matches) {
+    // if (window.matchMedia("(max-width: 768px)").matches) {
+    //   content.animate({
+    //     'width': reqWidthTablets + 'px'})
+    // } else if (window.matchMedia("(max-width: 480px)").matches) {
+    //   item.siblings().css({
+    //     'width' : 0
+    //   });
+
        content.animate({
-         'width': reqWidthMobiles + 'px'
+         'width': calcWidth + 'px'
        })
-       item.siblings().css({
-         'width' : 0
-       });
-    } else {
-      content.stop(true).animate({
-        'width': reqWidthDesktop + 'px'}, 750, () => { textBlock.fadeIn()
-        });
-    };
+    //
+    // } else {
+    //   content.stop(true).animate({
+    //     'width': reqWidthDesktop + 'px'}, 750, () => { textBlock.fadeIn()
+    //     });
+    // };
 
   } else {
     item.removeClass('menu-acco__item_active');
@@ -110,7 +117,7 @@ $(function() {
 
 // slider
 $(function() {
-  let sliderWrapper = $('.burger-slider');
+  const sliderWrapper = $('.burger-slider');
   let objects = sliderWrapper.children();
   let buttonPrev = $(".burger__scroll-prev");
   let buttonNext = $(".burger__scroll-next");
@@ -121,13 +128,13 @@ $(function() {
     $(object).css({display:"none"});
  }
  $(objects[0]).css({display:"flex"});
- buttonNext.on("click", e => {
+ buttonNext.on("click touchstart", e => {
    $(objects[currentSlide]).css({display:"none"});
    currentSlide = getNumber(currentSlide + 1);
    $(objects[currentSlide]).css({display:"flex"});
  });
 
- buttonPrev.on("click", e => {
+ buttonPrev.on("click touchstart", e => {
    $(objects[currentSlide]).css({display:"none"});
    currentSlide = getNumber(currentSlide - 1);
      $(objects[currentSlide]).css({display:"flex"});
@@ -147,29 +154,135 @@ $(function() {
 
 //popup
 $(function() {
-  let popup = $('.review-popup')
-  let authorText = $('.reviews__author')
-  let contentText = $('.reviews__content')
-  let authorPopup = $('.review-popup__author')
-  let contentPopup = $('.review-popup__content')
-  let button = $('.reviews__button')
-  let close = $('.review-popup__close')
+  const popup = $('.review-popup');
+  const authorText = $('.reviews__author');
+  const contentText = $('.reviews__content');
+  const authorPopup = $('.review-popup__author');
+  const contentPopup = $('.review-popup__content');
+  let button = $('.reviews__button');
+  let close = $('.review-popup__close');
 
-  $('.reviews__button').on('click', e => {
+  $('.reviews__button').on('click touchstart', e => {
     let target = $(e.target).closest('.reviews__item')
-    let title = $(target).children().find('.reviews__author').text()
-    let content = $(target).children().find('.reviews__content').text()
+    let title = $(target).children().find('.reviews__author').text();
+    let content = $(target).children().find('.reviews__content').text();
 
-    $('.review-popup__author').text(title)
+    $('.review-popup__author').text(title);
     $('.review-popup__text').text(content);
 	  popup.addClass('review-popup_visible');
   });
 
-  close.on('click', e => {
-    e.preventDefault()
+  close.on('click touchstart', e => {
+    e.preventDefault();
     popup.removeClass('review-popup_visible');
   });
 });
+
+//OPS
+
+$(function() {
+  const display = $('.maincontent');
+  const sections = $('.section');
+
+  let inScroll = false;
+
+  const mobileDetect = new MobileDetect(window.navigator.userAgent);
+  const isMobile = mobileDetect.mobile();
+
+  const switchMenuActiveClass = sectionEq => {
+    $('.pagination__item').eq(sectionEq).addClass('pagination__item_active')
+    .siblings().removeClass('pagination__item_active')
+  };
+
+  const performTransition = sectionEq => {
+    if (inScroll) return
+    inScroll = true
+
+    const position = (sectionEq * (-100)) + '%';
+
+    display.css({
+      'transform' : `translate(0, ${position})`,
+      '-webkit-transform' : `translate(0, ${position})`
+    })
+
+    sections.eq(sectionEq).addClass('section_active')
+      .siblings().removeClass('section_active');
+
+      setTimeout(() => {
+        inScroll = false;
+        switchMenuActiveClass(sectionEq);
+      }, 1300);
+};
+
+  const defineSections = sections => {
+    const activeSection = sections.filter('.section_active');
+    return {
+      activeSection: activeSection,
+      nextSection: activeSection.next(),
+      prevSection: activeSection.prev()
+    }
+  };
+
+  const scrollToSection = direction => {
+    const section = defineSections(sections)
+    if (inScroll) return;
+
+    if (direction === 'up' && section.nextSection.length) { //вниз
+      performTransition(section.nextSection.index())
+    }
+
+    if (direction === 'down' && section.prevSection.length) { //вверх
+      performTransition(section.prevSection.index())
+    }
+  };
+
+  $('.wrapper').on({
+    wheel : e => {
+      const deltaY = e.originalEvent.deltaY;
+      let direction = (deltaY > 0)
+      ? 'up'
+      : 'down'
+
+      scrollToSection(direction);
+    },
+    touchmove: e => (e.preventDefault())
+  });
+
+  $(document).on('keydown', e => {
+    const section = defineSections(sections);
+    if (inScroll) return
+
+    switch (e.keyCode) {
+      case 40 : //вверх
+      if (!section.nextSection.length) return;
+      performTransition(section.nextSection.index());
+      break;
+
+      case 38 : //вниз
+      if (!section.prevSection.length) return;
+      performTransition(section.prevSection.index());
+      break;
+    }
+  });
+
+
+  if (isMobile) {
+    $(window).swipe({
+      swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        scrollToSection(direction);
+      }
+    })
+  };
+
+  $('[data-scroll-to]').on('click touchstart', e => {
+    e.preventDefault();
+
+    const scrollItem = $(e.currentTarget);
+    const sectionIndex = parseInt(scrollItem.attr('data-scroll-to'));
+    performTransition(sectionIndex);
+  });
+});
+
 
 //карта
 $(function() {
