@@ -88,9 +88,6 @@ ul {
   position: relative;
   min-height: 650px;
   overflow: hidden; }
-  @media screen and (max-width: 768px) {
-    .wrapper {
-      min-height: auto; } }
 
 .maincontent {
   height: 100%;

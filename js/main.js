@@ -3,12 +3,17 @@ $(function() {
   const menuHam = $('.hamburger-menu');
   const buttonHam = $('.hamburger-menu-link');
   const closeHam = $('.hamburger-menu__close');
+  const linkHam = $('hamburger-menu__link');
 
   buttonHam.on('click touchstart', e => {
    menuHam.addClass('hamburger-menu_visible')
   });
 
   closeHam.on('click touchstart', e => {
+   menuHam.removeClass('hamburger-menu_visible')
+  });
+
+  linkHam.on('click touchstart', e => {
    menuHam.removeClass('hamburger-menu_visible')
   });
 });
@@ -49,9 +54,9 @@ $(function() {
 //menu-acco
 $(function() {
 
-  let item = $('.menu-acco__item')
-  let content = $('.menu-acco')
-  let closeMenu = $('#menu-close')
+  let item = $('.menu-acco__item');
+  let content = $('.menu-acco');
+  let closeMenu = $('#menu-close');
 
 
   $('.menu-acco__trigger').on('click touchstart', e => {
