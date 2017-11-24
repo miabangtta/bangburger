@@ -60,9 +60,6 @@ $(function() {
     };
   };
 
-  $('.menu-acco__trigger').on('click touchstart', e => {
-
-    e.preventDefault();
 
     const triggerMenu = $(e.currentTarget)
     const containerMenu = triggerMenu.closest('.menu-acco');
@@ -71,6 +68,11 @@ $(function() {
     let otherContent = $('.menu-acco__content', containerMenu);
     let items = $('.menu-acco__item', containerMenu);
     let textBlock = $('.menu-acco__text', itemMenu);
+
+  $('.menu-acco__trigger').on('click touchstart', e => {
+
+    e.preventDefault();
+
 
     if (!itemMenu.hasClass('menu-acco__item_active')) {
 
