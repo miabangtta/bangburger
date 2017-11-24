@@ -47,62 +47,69 @@ $(function() {
 });
 
 //menu-acco
+
 const calcWidth = () => {
-
-    const wWidth = $(window).width();
-    let reqWidth;
-    if ($(window).matchMedia("(max-width: 480px)").matches) {
-      reqWidth = wWidth - $('.menu-acco__trigger').outerWidth;
-    } else if ($(window).matchMedia("(max-width: 768px)").matches) {
-      reqWidth = wWidth - $('.menu-acco__trigger').outerWidth*3;
-    } else {
+const wWidth = $(window).width();
+  let reqWidth;
+  if (window.matchMedia("(max-width: 480px)").matches) {
+      reqWidth = wWidth - $('.menu-acco__trigger').outerWidth()*3;
+  } else if (window.matchMedia("(max-width: 768px)").matches) {
+      reqWidth = wWidth - $('.menu-acco__trigger').outerWidth()*3;
+  } else {
       reqWidth = 510;
-    };
-    return reqWidth;
   };
+  return reqWidth;
+};
 
-  $(function() {
-    $('.menu-acco__trigger').on('click touchstart', e => {
+$(function() {
 
-      e.preventDefault();
+  $('.menu-acco__trigger').on('click', e => {
+    const triggerMenu = $(e.currentTarget);
+    const containerMenu = triggerMenu.closest('.menu-acco');
+    const itemMenu = triggerMenu.closest('.menu-acco__item');
+    let content = $('.menu-acco__content', itemMenu);
+    let otherContent = $('.menu-acco__content', containerMenu);
+    let items = $('.menu-acco__item', containerMenu);
+    let textBlock = $('.menu-acco__text', itemMenu);
 
-      const triggerMenu = $(e.currentTarget)
-      const containerMenu = triggerMenu.closest('.menu-acco');
-      const itemMenu = triggerMenu.closest('.menu-acco__item');
-      let content = $('.menu-acco__content', itemMenu);
-      let otherContent = $('.menu-acco__content', containerMenu);
-      let items = $('.menu-acco__item', containerMenu);
-      let textBlock = $('.menu-acco__text', itemMenu);
+    e.preventDefault();
 
-
-      if (!itemMenu.hasClass('menu-acco__item_active')) {
-
+    if (itemMenu.hasClass('menu-acco__item_active')) {
+        itemMenu.removeClass('menu-acco__item_active');
+        console.log(itemMenu);
+        content.stop(true).animate({
+          'width': 0 }, 750)
+    } else {
         items.removeClass('menu-acco__item_active');
         itemMenu.addClass('menu-acco__item_active');
-
         otherContent.animate({
-          'width': 0
-        });
-        textBlock.width(calcWidth() - 48 + 'px');
-         content.animate({
-           'width': calcWidth() + 'px'
-         });
-
-      } else {
-        itemMenu.removeClass('menu-acco__item_active');
-        content.stop(true).animate({
-          'width': 0
-        }, 750)
-      };
+            'width': 0
     });
+        textBlock.width(calcWidth() - 48 + 'px');
+        content.animate({
+          'width': calcWidth() + 'px'
+    });
+  }
+  });
 
   $(window).resize( e => {
     $('.menu-acco__item_active').find('.menu-acco__content').css({
       'width': calcWidth() + 'px'
     });
-     $('.menu-acco__item_active').find('.menu-acco__text').css({
+    $('.menu-acco__item_active').find('.menu-acco__text').css({
       'width': calcWidth() + 'px'
     });
+  });
+
+  $(document).on('click', e => {
+    let item = $('.menu-acco__item');
+    if (!item.is(e.target) && item.has(e.target).length === 0) {
+      item.removeClass('menu-acco__item_active');
+      $('.menu-acco__content').stop(true).animate({
+        'width' : 0
+      }, 750);
+    }
+  })
 });
 
 // slider
@@ -345,5 +352,5 @@ $(function() {
     });
 
   $('#form-order').on('submit', submitForm);
-  }
+};
 });
