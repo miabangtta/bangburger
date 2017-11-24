@@ -90,7 +90,8 @@ $(function() {
     } else {
       item.removeClass('menu-acco__item_active');
       content.stop(true).animate({
-        'width': 0 }, 750, () => { textBlock.fadeOut()
+        'width': 0
+      }, 750, () => { textBlock.fadeOut()
       })
     };
   });
@@ -99,10 +100,10 @@ $(function() {
   $(window).resize( e => {
     if ('.menu-acco__item_active') {
       reqWidth(calcWidth);
-      $('.menu-acco__item_active').find('.menu-acco__content') {
-        'width': reqWidth + 'px';
-      }
-    }
+      $('.menu-acco__item_active').find('.menu-acco__content').css({
+        'width': reqWidth + 'px'
+      });
+    };
   });
 });
 
