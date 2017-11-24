@@ -98,7 +98,7 @@ $(function() {
 
 
   $(window).resize( e => {
-    if (itemMenu.hasClass('.menu-acco__item_active')) {
+    if (itemMenu.hasClass('menu-acco__item_active')) {
       reqWidth(calcWidth);
       $('.menu-acco__item_active').find('.menu-acco__content').css({
         'width': reqWidth + 'px'
