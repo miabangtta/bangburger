@@ -47,8 +47,6 @@ $(function() {
 });
 
 //menu-acco
-
-$(function() {
   const wWidth = $(window).width();
   const reqWidth = calcWidth => {
 
@@ -61,6 +59,7 @@ $(function() {
     };
   };
 
+$(function() {
 
   $('.menu-acco__trigger').on('click touchstart', e => {
 
