@@ -74,10 +74,10 @@ $(function() {
 
     if (!item.hasClass('menu-acco__item_active')) {
 
-      items.removeClass('menu-acco__item_active')
-      item.addClass('menu-acco__item_active')
+      items.removeClass('menu-acco__item_active');
+      item.addClass('menu-acco__item_active');
 
-      calcWidth();
+      reqWidth(calcWidth);
 
       otherContent.animate({
         'width': 0
@@ -98,7 +98,7 @@ $(function() {
 
   $(window).resize( e => {
     if ('.menu-acco__item_active') {
-      calcWidth();
+      reqWidth(calcWidth);
       $('.menu-acco__item_active').find('.menu-acco__content') {
         'width': reqWidth + 'px';
       }
@@ -170,7 +170,6 @@ $(function() {
 });
 
 //OPS
-
 $(function() {
   const display = $('.maincontent');
   const sections = $('.section');
@@ -260,7 +259,7 @@ $(function() {
   if (isMobile) {
     $(window).swipe({
       swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-        scrollToSection(direction);
+        preventDefault();
       }
     })
   };
