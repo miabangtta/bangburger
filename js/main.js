@@ -76,7 +76,6 @@ $(function() {
 
     if (itemMenu.hasClass('menu-acco__item_active')) {
         itemMenu.removeClass('menu-acco__item_active');
-        console.log(itemMenu);
         content.stop(true).animate({
           'width': 0 }, 750)
     } else {
