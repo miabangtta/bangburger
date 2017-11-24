@@ -113,6 +113,14 @@
 .form__teatarea {
   resize: none;
   height: 7rem;
+
+  @include tablets {
+    height: 6rem;
+  }
+
+  @include phones {
+    height: 5rem;
+  }
 }
 
 .form__input-circle {

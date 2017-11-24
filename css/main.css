@@ -88,6 +88,9 @@ ul {
   position: relative;
   min-height: 650px;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      min-height: 100%; } }
 
 .maincontent {
   height: 100%;
@@ -98,7 +101,7 @@ ul {
   will-change: transform; }
   @media screen and (max-width: 768px) {
     .maincontent {
-      min-height: auto; } }
+      min-height: 100%; } }
 
 .container {
   width: 95%;
@@ -127,9 +130,12 @@ ul {
       max-width: 768px; } }
 
 .section {
-  height: 100%;
+  height: 100vh;
   min-height: 650px;
   background-color: rgba(0, 0, 0, 0.31); }
+  @media screen and (max-width: 768px) {
+    .section {
+      height: 100%; } }
 
 .header {
   height: 6.25rem;
@@ -1354,7 +1360,7 @@ ul {
       margin-bottom: 2rem; } }
   @media screen and (max-width: 480px) {
     .team-acco__trigger {
-      font-size: 1.5rem; } }
+      font-size: 1.25rem; } }
 
 .team-acco__content {
   height: 0;
@@ -1689,6 +1695,12 @@ ul {
 .form__teatarea {
   resize: none;
   height: 7rem; }
+  @media screen and (max-width: 768px) {
+    .form__teatarea {
+      height: 6rem; } }
+  @media screen and (max-width: 480px) {
+    .form__teatarea {
+      height: 5rem; } }
 
 .form__input-circle {
   width: 1rem;
