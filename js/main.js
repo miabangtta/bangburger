@@ -347,5 +347,5 @@ $(function() {
     });
 
   $('#form-order').on('submit', submitForm);
-  };
-};
+  }
+});
