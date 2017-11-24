@@ -66,16 +66,16 @@ $(function() {
 
     const triggerMenu = $(e.currentTarget)
     const containerMenu = triggerMenu.closest('.menu-acco');
-    let item = triggerMenu.closest('.menu-acco__item');
-    let content = $('.menu-acco__content', item);
+    const itemMenu = triggerMenu.closest('.menu-acco__item');
+    let content = $('.menu-acco__content', itemMenu);
     let otherContent = $('.menu-acco__content', containerMenu);
     let items = $('.menu-acco__item', containerMenu);
-    let textBlock = $('.menu-acco__text', item);
+    let textBlock = $('.menu-acco__text', itemMenu);
 
-    if (!item.hasClass('menu-acco__item_active')) {
+    if (!itemMenu.hasClass('menu-acco__item_active')) {
 
       items.removeClass('menu-acco__item_active');
-      item.addClass('menu-acco__item_active');
+      itemMenu.addClass('menu-acco__item_active');
 
       reqWidth(calcWidth);
 
@@ -88,7 +88,7 @@ $(function() {
        });
 
     } else {
-      item.removeClass('menu-acco__item_active');
+      itemMenu.removeClass('menu-acco__item_active');
       content.stop(true).animate({
         'width': 0
       }, 750, () => { textBlock.fadeOut()
@@ -98,7 +98,7 @@ $(function() {
 
 
   $(window).resize( e => {
-    if ('.menu-acco__item_active') {
+    if (itemMenu.hasClass('.menu-acco__item_active')) {
       reqWidth(calcWidth);
       $('.menu-acco__item_active').find('.menu-acco__content').css({
         'width': reqWidth + 'px'
