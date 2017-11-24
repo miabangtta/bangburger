@@ -47,6 +47,8 @@ $(function() {
 });
 
 //menu-acco
+$(
+
   const wWidth = $(window).width();
   const reqWidth = calcWidth => {
 
@@ -59,55 +61,55 @@ $(function() {
     };
   };
 
-$(function() {
+  $(function() {
 
-  $('.menu-acco__trigger').on('click touchstart', e => {
+    $('.menu-acco__trigger').on('click touchstart', e => {
 
-    e.preventDefault();
+      e.preventDefault();
 
-    const triggerMenu = $(e.currentTarget)
-    const containerMenu = triggerMenu.closest('.menu-acco');
-    const itemMenu = triggerMenu.closest('.menu-acco__item');
-    let content = $('.menu-acco__content', itemMenu);
-    let otherContent = $('.menu-acco__content', containerMenu);
-    let items = $('.menu-acco__item', containerMenu);
-    let textBlock = $('.menu-acco__text', itemMenu);
+      const triggerMenu = $(e.currentTarget)
+      const containerMenu = triggerMenu.closest('.menu-acco');
+      const itemMenu = triggerMenu.closest('.menu-acco__item');
+      let content = $('.menu-acco__content', itemMenu);
+      let otherContent = $('.menu-acco__content', containerMenu);
+      let items = $('.menu-acco__item', containerMenu);
+      let textBlock = $('.menu-acco__text', itemMenu);
 
 
-    if (!itemMenu.hasClass('menu-acco__item_active')) {
+      if (!itemMenu.hasClass('menu-acco__item_active')) {
 
-      items.removeClass('menu-acco__item_active');
-      itemMenu.addClass('menu-acco__item_active');
+        items.removeClass('menu-acco__item_active');
+        itemMenu.addClass('menu-acco__item_active');
 
-      reqWidth(calcWidth);
+        reqWidth(calcWidth);
 
-      otherContent.animate({
-        'width': 0
-      });
+        otherContent.animate({
+          'width': 0
+        });
 
-       content.stop(true).animate({
-         'width': reqWidth + 'px'
-       });
+         content.stop(true).animate({
+           'width': reqWidth + 'px'
+         });
 
-    } else {
-      itemMenu.removeClass('menu-acco__item_active');
-      content.stop(true).animate({
-        'width': 0
-      }, 750, () => { textBlock.fadeOut()
-      })
-    };
+      } else {
+        itemMenu.removeClass('menu-acco__item_active');
+        content.stop(true).animate({
+          'width': 0
+        }, 750, () => { textBlock.fadeOut()
+        })
+      };
+    });
+
+    $(window).resize( e => {
+      if ('.menu-acco__item'.hasClass('menu-acco__item_active')) {
+        reqWidth(calcWidth);
+        $('.menu-acco__item_active').find('.menu-acco__content').css({
+          'width': reqWidth + 'px'
+        });
+      };
+    });
   });
-
-  $(window).resize( e => {
-    if ('.menu-acco__item'.hasClass('menu-acco__item_active')) {
-      reqWidth(calcWidth);
-      $('.menu-acco__item_active').find('.menu-acco__content').css({
-        'width': reqWidth + 'px'
-      });
-    };
-  });
-});
-
+);
 // slider
 $(function() {
   const sliderWrapper = $('.burger-slider');
