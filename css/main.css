@@ -1520,8 +1520,6 @@ ul {
   z-index: 300; }
   .menu-acco__item_active .menu-acco__trigger-text {
     color: #f8b43a; }
-  .menu-acco__item_active .menu-acco__content {
-    width: 100%; }
 
 .menu__close {
   display: none; }

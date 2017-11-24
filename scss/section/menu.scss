@@ -88,34 +88,6 @@
     .menu-acco__trigger-text {
       color: $yellow;
     }
-
-    .menu-acco__content {
-      width: 100%;
-    }
-
-    // @include phones {
-    //   position: absolute;
-    //   width: 100%;
-    //   bottom: 0;
-    //   top: 0;
-    //   left: 0;
-    //   right: 0;
-    //   z-index: 300;
-    //   display: flex;
-    //   flex-direction: row;
-
-      // .menu-acco__trigger {
-      //   left: 0;
-      //   width: 15%;
-      //   display: block;
-      // }
-
-    //   .menu-acco__content {
-    //     // width: 85%;
-    //     // display: block;
-    //     background-color: rgba($dark, .99);
-    //     }
-    // // }
   }
 }
 

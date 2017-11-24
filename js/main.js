@@ -47,20 +47,21 @@ $(function() {
 });
 
 //menu-acco
-const wWidth = $(window).width();
-const reqWidth = calcWidth => {
+const calcWidth = () => {
 
+    const wWidth = $(window).width();
+    let reqWidth;
     if ($(window).matchMedia("(max-width: 480px)").matches) {
-      calcWidth = wWidth - $('.menu-acco__trigger').outerWidth;
+      reqWidth = wWidth - $('.menu-acco__trigger').outerWidth;
     } else if ($(window).matchMedia("(max-width: 768px)").matches) {
-      calcWidth = wWidth - $('.menu-acco__trigger').outerWidth*3;
+      reqWidth = wWidth - $('.menu-acco__trigger').outerWidth*3;
     } else {
-      calcWidth = 510;
+      reqWidth = 510;
     };
+    return reqWidth;
   };
 
   $(function() {
-
     $('.menu-acco__trigger').on('click touchstart', e => {
 
       e.preventDefault();
@@ -79,34 +80,30 @@ const reqWidth = calcWidth => {
         items.removeClass('menu-acco__item_active');
         itemMenu.addClass('menu-acco__item_active');
 
-        reqWidth(calcWidth);
-
         otherContent.animate({
           'width': 0
         });
-
-         content.stop(true).animate({
-           'width': reqWidth + 'px'
+        textBlock.width(calcWidth() - 48 + 'px');
+         content.animate({
+           'width': calcWidth() + 'px'
          });
 
       } else {
         itemMenu.removeClass('menu-acco__item_active');
         content.stop(true).animate({
           'width': 0
-        }, 750, () => { textBlock.fadeOut()
-        })
+        }, 750)
       };
     });
 
-    $(window).resize( e => {
-      if (('.menu-acco__item').hasClass('menu-acco__item_active')) {
-        reqWidth(calcWidth);
-        $('.menu-acco__item_active').find('.menu-acco__content').css({
-          'width': reqWidth + 'px'
-        });
-      };
+  $(window).resize( e => {
+    $('.menu-acco__item_active').find('.menu-acco__content').css({
+      'width': calcWidth() + 'px'
     });
-  });
+     $('.menu-acco__item_active').find('.menu-acco__text').css({
+      'width': calcWidth() + 'px'
+    });
+});
 
 // slider
 $(function() {
