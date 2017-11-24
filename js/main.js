@@ -84,7 +84,7 @@ $(function() {
       });
 
        content.stop(true).animate({
-         'width': reqWidth + 'px';
+         'width': reqWidth + 'px'
        });
 
     } else {
