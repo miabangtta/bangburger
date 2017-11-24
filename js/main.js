@@ -47,6 +47,7 @@ $(function() {
 });
 
 //menu-acco
+
 $(function() {
   const wWidth = $(window).width();
   const reqWidth = calcWidth => {
@@ -61,6 +62,10 @@ $(function() {
   };
 
 
+  $('.menu-acco__trigger').on('click touchstart', e => {
+
+    e.preventDefault();
+
     const triggerMenu = $(e.currentTarget)
     const containerMenu = triggerMenu.closest('.menu-acco');
     const itemMenu = triggerMenu.closest('.menu-acco__item');
@@ -68,10 +73,6 @@ $(function() {
     let otherContent = $('.menu-acco__content', containerMenu);
     let items = $('.menu-acco__item', containerMenu);
     let textBlock = $('.menu-acco__text', itemMenu);
-
-  $('.menu-acco__trigger').on('click touchstart', e => {
-
-    e.preventDefault();
 
 
     if (!itemMenu.hasClass('menu-acco__item_active')) {
@@ -98,9 +99,8 @@ $(function() {
     };
   });
 
-
   $(window).resize( e => {
-    if (itemMenu.hasClass('menu-acco__item_active')) {
+    if ('.menu-acco__item'.hasClass('menu-acco__item_active')) {
       reqWidth(calcWidth);
       $('.menu-acco__item_active').find('.menu-acco__content').css({
         'width': reqWidth + 'px'
