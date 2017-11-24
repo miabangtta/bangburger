@@ -47,10 +47,8 @@ $(function() {
 });
 
 //menu-acco
-$(
-
-  const wWidth = $(window).width();
-  const reqWidth = calcWidth => {
+const wWidth = $(window).width();
+const reqWidth = calcWidth => {
 
     if ($(window).matchMedia("(max-width: 480px)").matches) {
       calcWidth = wWidth - $('.menu-acco__trigger').outerWidth;
@@ -101,7 +99,7 @@ $(
     });
 
     $(window).resize( e => {
-      if ('.menu-acco__item'.hasClass('menu-acco__item_active')) {
+      if (('.menu-acco__item').hasClass('menu-acco__item_active')) {
         reqWidth(calcWidth);
         $('.menu-acco__item_active').find('.menu-acco__content').css({
           'width': reqWidth + 'px'
@@ -109,7 +107,7 @@ $(
       };
     });
   });
-);
+
 // slider
 $(function() {
   const sliderWrapper = $('.burger-slider');
