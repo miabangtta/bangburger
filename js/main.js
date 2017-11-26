@@ -218,7 +218,7 @@ $(function() {
   };
 
   const performTransition = sectionEq => {
-    if (window.matchMedia("(max-height: 450px)").matches) return;
+    if (window.matchMedia("(max-height: 650px)").matches) return;
 
     if (inScroll) return
 
@@ -250,7 +250,7 @@ $(function() {
   };
 
   const scrollToSection = direction => {
-    if (window.matchMedia("(max-height: 450px)").matches) return;
+    if (window.matchMedia("(max-height: 650px)").matches) return;
     if ( $('.review-popup').hasClass('review-popup_visible') ) return;
     if ( $('.order-popup').hasClass('order-popup_visible') ) return;
     if ( $('.hamburger-menu').hasClass('hamburger-menu_visible') ) return;
@@ -313,7 +313,7 @@ $(function() {
 
   $('[data-scroll-to]').on('click touchstart', e => {
 
-    if (window.matchMedia("(max-height: 450px)").matches) return;
+    if (window.matchMedia("(max-height: 650px)").matches) return;
     e.preventDefault();
 
     const scrollItem = $(e.currentTarget);

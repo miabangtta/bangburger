@@ -9,7 +9,7 @@
     height: 100%;
   }
 
-  @media screen and (max-height: 450px) {
+  @media screen and (max-height: 650px) {
     overflow: visible;
   }
 }
@@ -24,7 +24,7 @@
     min-height: none;
   }
 
-  @media screen and (max-height: 450px) {
+  @media screen and (max-height: 650px) {
     will-change: auto;
   }
 }
@@ -42,7 +42,7 @@
     max-width: 768px;
   }
 
-  @media screen and (max-height: 450px) {
+  @media screen and (max-height: 650px) {
     overflow: visible;
   }
 }

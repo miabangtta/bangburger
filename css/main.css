@@ -87,7 +87,7 @@ ul {
   @media screen and (max-width: 768px) {
     .wrapper {
       height: 100%; } }
-  @media screen and (max-height: 450px) {
+  @media screen and (max-height: 650px) {
     .wrapper {
       overflow: visible; } }
 
@@ -101,7 +101,7 @@ ul {
   @media screen and (max-width: 768px) {
     .maincontent {
       min-height: none; } }
-  @media screen and (max-height: 450px) {
+  @media screen and (max-height: 650px) {
     .maincontent {
       will-change: auto; } }
 
@@ -130,7 +130,7 @@ ul {
   @media screen and (max-width: 768px) {
     .container {
       max-width: 768px; } }
-  @media screen and (max-height: 450px) {
+  @media screen and (max-height: 650px) {
     .container {
       overflow: visible; } }
 
