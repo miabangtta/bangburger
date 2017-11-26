@@ -1,7 +1,3 @@
-@media screen and (max-width: 768px) {
-  .class {
-    color: red; } }
-
 @font-face {
   font-family: 'lifehack';
   src: url("../fonts/lifehack_medium.woff2") format("woff2"), url("../fonts/lifehack_medium.woff") format("woff");
@@ -91,6 +87,9 @@ ul {
   @media screen and (max-width: 768px) {
     .wrapper {
       height: 100%; } }
+  @media screen and (max-height: 450px) {
+    .wrapper {
+      overflow: visible; } }
 
 .maincontent {
   height: 100%;
@@ -102,6 +101,9 @@ ul {
   @media screen and (max-width: 768px) {
     .maincontent {
       min-height: none; } }
+  @media screen and (max-height: 450px) {
+    .maincontent {
+      will-change: auto; } }
 
 .container {
   width: 95%;
@@ -128,9 +130,12 @@ ul {
   @media screen and (max-width: 768px) {
     .container {
       max-width: 768px; } }
+  @media screen and (max-height: 450px) {
+    .container {
+      overflow: visible; } }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 650px;
   background-color: rgba(0, 0, 0, 0.31); }
   @media screen and (max-width: 768px) {
@@ -555,6 +560,11 @@ ul {
   font-family: "ubunturegular"; }
   .hamburger-menu__link:hover {
     text-decoration: underline; }
+  @media screen and (max-width: 480px) {
+    .hamburger-menu__link {
+      margin-top: 0.625rem;
+      margin-bottom: 0.625rem;
+      font-size: 1.125rem; } }
 
 .hamburger-menu-link {
   vertical-align: middle;
@@ -1179,7 +1189,7 @@ ul {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 1100;
   top: 0;
   left: 0;
   right: 0;
@@ -1573,7 +1583,8 @@ ul {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
 
 .order__title {
   margin-top: -4rem;
@@ -1824,6 +1835,96 @@ ul {
     .form__btn {
       margin-top: 0; } }
 
+.order-popup {
+  position: absolute;
+  background: rgba(47, 50, 52, 0.93);
+  display: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .order-popup_visible {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+.order-popup__block {
+  width: 37%;
+  height: 45%;
+  background-color: #FFF;
+  border-radius: 0.3125rem;
+  padding: 1.5625rem 1.25rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .order-popup__block {
+      width: 80%; } }
+  @media screen and (max-width: 480px) {
+    .order-popup__block {
+      width: 95%; } }
+
+.order-popup__text {
+  line-height: 1.42;
+  font-size: 0.875rem;
+  font-family: "ubuntulight", sans-serif; }
+  @media screen and (max-width: 768px) {
+    .order-popup__text {
+      line-height: 1.1; } }
+
+.order-popup__btn {
+  display: inline-block;
+  margin-top: 3.125rem;
+  background-color: #e45028;
+  text-transform: uppercase;
+  border-radius: 0.3125rem;
+  text-align: center;
+  font-family: 'ubuntumedium';
+  font-size: 0.8125rem;
+  line-height: 2.1875rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 0.9375rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border: none; }
+  .order-popup__btn:hover {
+    background-color: #c1401e; }
+  @media screen and (max-width: 768px) {
+    .order-popup__btn {
+      margin-top: 3.125rem; } }
+  @media screen and (max-width: 480px) {
+    .order-popup__btn {
+      margin-top: 1.75rem;
+      padding: 0 1.25rem; } }
+
 .contacts__container {
   height: 100%;
   width: 100%;
@@ -1944,7 +2045,7 @@ ul {
   top: 6.25rem;
   right: 1.875rem;
   position: fixed;
-  z-index: 1100; }
+  z-index: 1000; }
   @media screen and (max-width: 768px) {
     .pagination {
       display: none; } }

@@ -8,6 +8,10 @@
   @include tablets {
     height: 100%;
   }
+
+  @media screen and (max-height: 450px) {
+    overflow: visible;
+  }
 }
 
 .maincontent {
@@ -18,6 +22,10 @@
 
   @include tablets {
     min-height: none;
+  }
+
+  @media screen and (max-height: 450px) {
+    will-change: auto;
   }
 }
 
@@ -33,14 +41,17 @@
   @include tablets {
     max-width: 768px;
   }
+
+  @media screen and (max-height: 450px) {
+    overflow: visible;
+  }
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 650px;
   background-color: rgba(0,0,0,0.31);
   @include tablets {
     height: 100%;
   }
-
 }

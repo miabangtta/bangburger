@@ -1,4 +1,11 @@
 <?php
+use PHPMailer\phpmailer\phpmailer;
+use phpmailer\phpmailer\exception;
+
+require 'phpmailer/exception.php';
+require 'phpmailer/phpmailer.php';
+require 'phpmailer/smtp.php';
+
   $name = $_POST['user-name'];
   $phone = $_POST['phone'];
   $street = $_POST['street'];
@@ -40,14 +47,14 @@
 
   $mail = mail('bangtta@yandex.ru', 'Заказ', $mail_message, $headers);
 
-  $data = [];
+  $data;
 
   if ($mail) {
     $data['status'] = "OK";
-    $data['mes'] = "письмо успешно отправлено";
+    $data['mes'] = "Ваш заказ принят. Приятного аппетита!";
   } else {
     $data['status'] = "No";
-    $data['mes'] = "на сервере произошла ошибка";
+    $data['mes'] = "Не удалось отправить заказ. Пожалуйста, введите данные снова";
   }
 
   echo json_encode($data);

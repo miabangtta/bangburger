@@ -3,15 +3,41 @@ $(function() {
   const menuHam = $('.hamburger-menu');
   const buttonHam = $('.hamburger-menu-link');
   const closeHam = $('.hamburger-menu__close');
-  const linkHam = $('hamburger-menu__link');
+  const itemHam = $('.hamburger-menu__link');
+
+  let inProcess = false;
 
   buttonHam.on('click touchstart', e => {
-   menuHam.addClass('hamburger-menu_visible')
+   menuHam.addClass('hamburger-menu_visible');
+
+   if (inProcess) return
+
+   inProcess = true
+
+   setTimeout(() => {
+     inProcess = false
+  }, 1000);
+
   });
 
   closeHam.on('click touchstart', e => {
-   menuHam.removeClass('hamburger-menu_visible')
+   if (inProcess) return
+
+   inProcess = true
+
+   setTimeout(() => {
+     inProcess = false
+  }, 1000);
+
+  menuHam.removeClass('hamburger-menu_visible');
   });
+
+  itemHam.on('click touchstart', e => {
+    e.preventDefault();
+    menuHam.removeClass('hamburger-menu_visible');
+    window.location.href = e.currentTarget.href;
+
+  })
 });
 
 // team-acco
@@ -35,19 +61,20 @@ $(function() {
        )
 
        content.stop(true, true).animate({
-         'height': "100%" }, 600, () => { content.fadeIn()
-         })
+         'height': "100%"
+        }, 600, () => { content.fadeIn()
+      })
 
      } else {
        item.removeClass('team-acco__item_active');
        content.stop(true, true).animate({
-         'height': 0}, 350
+         'height': 0
+        }, 350
        )};
    });
 });
 
 //menu-acco
-
 const calcWidth = () => {
 const wWidth = $(window).width();
   let reqWidth;
@@ -166,6 +193,7 @@ $(function() {
     $('.review-popup__author').text(title);
     $('.review-popup__text').text(content);
 	  popup.addClass('review-popup_visible');
+
   });
 
   close.on('click touchstart', e => {
@@ -190,7 +218,10 @@ $(function() {
   };
 
   const performTransition = sectionEq => {
+    if (window.matchMedia("(max-height: 450px)").matches) return;
+
     if (inScroll) return
+
     inScroll = true
 
     const position = (sectionEq * (-100)) + '%';
@@ -219,6 +250,10 @@ $(function() {
   };
 
   const scrollToSection = direction => {
+    if (window.matchMedia("(max-height: 450px)").matches) return;
+    if ( $('.review-popup').hasClass('review-popup_visible') ) return;
+    if ( $('.order-popup').hasClass('order-popup_visible') ) return;
+
     const section = defineSections(sections)
     if (inScroll) return;
 
@@ -250,26 +285,31 @@ $(function() {
     switch (e.keyCode) {
       case 40 : //вверх
       if (!section.nextSection.length) return;
+      if ( $('.review-popup').hasClass('review-popup_visible') ) return;
+      if ( $('.order-popup').hasClass('order-popup_visible') ) return;
       performTransition(section.nextSection.index());
       break;
 
       case 38 : //вниз
       if (!section.prevSection.length) return;
+      if ( $('.review-popup').hasClass('review-popup_visible') ) return;
+      if ( $('.order-popup').hasClass('order-popup_visible') ) return;
       performTransition(section.prevSection.index());
       break;
     }
   });
 
-
   if (isMobile) {
     $(window).swipe({
       swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-        preventDefault();
+        performTransition(direction);
       }
     })
   };
 
   $('[data-scroll-to]').on('click touchstart', e => {
+
+    if (window.matchMedia("(max-height: 450px)").matches) return;
     e.preventDefault();
 
     const scrollItem = $(e.currentTarget);
@@ -320,36 +360,28 @@ $(function() {
 // форма заказа
 $(function() {
   const ajaxForm = function (form) {
-    const formData = form.serialize(),
-          url = formData.attr('action');
-
-    return $.ajax({
-           type: 'POST',
-           url: url,
-           dataType: 'JSON',
-           data: data
-    })
-  };
+  const formData = form.serialize();
+  const url = formData.attr('action');
 
   const submitForm = function (e) {
     e.preventDefault();
-    const targetForm = $(e.target);
 
-    ajaxForm(form)
-    .done(function(msg)  {
-      var mes = msg.mes,
-          status = msg.status;
+    var color = $('input').css('border-color');
 
-      if (status === 'OK') {
-          form.append('<p class="success">' + mes + '</p>');
-      } else {
-          form.append('<p class="error">' + mes + '</p>');
+    $.ajax('main.php', {
+      type: "POST",
+      data: formData,
+      success: e => {
+        $('.order-popup__text').text(data);
+        $('.order-popup').addClass('order-popup_visible');
       }
-    })
-    .fail(function(jqHR, textStatus) {
-      alert("Request failed: " + textStatus);
     });
+  }
 
   $('#form-order').on('submit', submitForm);
-};
+  };
+
+  $('.order-popup__btn').on('click', e => {
+    $('.order-popup').removeClass('order-popup_visible');
+  })
 });

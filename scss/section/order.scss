@@ -3,6 +3,7 @@
   background-size: cover;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .order__title {
@@ -235,8 +236,6 @@
     padding: 0 1.2rem;
     margin-top: 0.6rem;
   }
-
-
   @include phones {
     margin-top: 0;
   }

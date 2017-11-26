@@ -106,4 +106,10 @@
 	&:hover {
 		text-decoration: underline;
 	}
+
+	@include phones {
+		margin-top: rem(10px);
+		margin-bottom: rem(10px);
+		font-size: rem(18px);
+	}
 }
