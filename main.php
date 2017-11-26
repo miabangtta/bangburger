@@ -1,6 +1,6 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use phpmailer\PHPMailer;
+use phpmailer\Exception;
 
 require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
@@ -19,7 +19,7 @@ $dontcall = $_POST['dontcall'];
 $dontcall = isset($dontcall) ? 'НЕТ' : 'ДА';
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
-try {
+
     //Server settings                              // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
@@ -80,7 +80,7 @@ try {
     $data['mes'] = "Ваш заказ принят. Приятного аппетита!";
   } else {
     $data['status'] = "No";
-    $data['mes'] = "Не удалось отправить заказ. Пожалуйста, введите данные снова";
+    $data['mes'] = "Не удалось отправить заказ. Пожалуйста, повторите попытку";
   }
 
   echo json_encode($data);

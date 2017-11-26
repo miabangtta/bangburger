@@ -378,13 +378,13 @@ $(function() {
         $('.order-popup__text').text('Ваш заказ принят. Приятного аппетита!');
       } else {
         $('.order-popup').addClass('order-popup_visible');
-        $('.order-popup__text').text('Не удалось отправить заказ. Пожалуйста, введите данные снова');
+        $('.order-popup__text').text('Не удалось отправить заказ. Пожалуйста, повторите попытку');
       }
     });
 
     request.fail(function(jqXHR, textStatus) {
       $('.order-popup').addClass('order-popup_visible');
-      $('.order-popup__text').text('Не удалось отправить заказ. Пожалуйста, введите данные снова');
+      $('.order-popup__text').text('Не удалось отправить заказ. Пожалуйста, повторите попытку');
     });
   }
 
@@ -403,7 +403,6 @@ $(function() {
 
   $('#form-order').on('submit', submitForm);
 
-console.log('#form-order');
   $('.order-popup__btn').on('click', e => {
     $('.order-popup').removeClass('order-popup_visible');
   });
