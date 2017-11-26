@@ -253,6 +253,7 @@ $(function() {
     if (window.matchMedia("(max-height: 450px)").matches) return;
     if ( $('.review-popup').hasClass('review-popup_visible') ) return;
     if ( $('.order-popup').hasClass('order-popup_visible') ) return;
+    if ( $('.hamburger-menu').hasClass('hamburger-menu_visible') ) return;
 
     const section = defineSections(sections)
     if (inScroll) return;
@@ -287,6 +288,8 @@ $(function() {
       if (!section.nextSection.length) return;
       if ( $('.review-popup').hasClass('review-popup_visible') ) return;
       if ( $('.order-popup').hasClass('order-popup_visible') ) return;
+      if ( $('.hamburger-menu').hasClass('hamburger-menu_visible') ) return;
+
       performTransition(section.nextSection.index());
       break;
 
@@ -294,6 +297,7 @@ $(function() {
       if (!section.prevSection.length) return;
       if ( $('.review-popup').hasClass('review-popup_visible') ) return;
       if ( $('.order-popup').hasClass('order-popup_visible') ) return;
+      if ( $('.hamburger-menu').hasClass('hamburger-menu_visible') ) return;
       performTransition(section.prevSection.index());
       break;
     }
@@ -359,29 +363,50 @@ $(function() {
 
 // форма заказа
 $(function() {
-  const ajaxForm = function (form) {
-  const formData = form.serialize();
-  const url = formData.attr('action');
-
   const submitForm = function (e) {
     e.preventDefault();
+    const form = $(e.target);
+    const request = ajaxForm(form);
 
-    var color = $('input').css('border-color');
+    request.done(function(msg) {
+      const msg = msg.mes,
+            status = msg.status;
 
-    $.ajax('main.php', {
-      type: "POST",
-      data: formData,
-      success: e => {
-        $('.order-popup__text').text(data);
+      if (status === 'OK') {
+        console.log('okay sent');
+        $('.order-popup__text').text(mes);
+        $('.order-popup').addClass('order-popup_visible');
+      } else {
+        $('.order-popup__text').text(mes);
         $('.order-popup').addClass('order-popup_visible');
       }
     });
+
+    request.fail(function(jqXHR, textStatus) {
+      console.log('fail');
+      $('.order-popup__text').text(mes);
+      $('.order-popup').addClass('order-popup_visible');
+    });
   }
 
-  $('#form-order').on('submit', submitForm);
+  const ajaxForm = function (form) {
+
+    const url = form.attr('action');
+    const data = form.serialize();
+
+    return $.ajax({
+      type: "POST",
+      url: url,
+      data: data,
+      dataType: 'JSON'
+    });
   };
+
+  $('#form-order').on('submit', submitForm);
+
 
   $('.order-popup__btn').on('click', e => {
     $('.order-popup').removeClass('order-popup_visible');
-  })
+  });
+  
 });
