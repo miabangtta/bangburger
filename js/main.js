@@ -363,29 +363,28 @@ $(function() {
 
 // форма заказа
 $(function() {
-  const submitForm = function (e) {
-    e.preventDefault();
-    const form = $(e.target);
+  const submitForm = function (ev) {
+    ev.preventDefault();
+
+    const form = $(ev.target);
     const request = ajaxForm(form);
 
-    request.done(function(msg) {
-      const msg = msg.mes,
-            status = msg.status;
+    request.done(function(msgg) {
+      let mes = msgg.mes;
+      let status = msgg.status;
 
       if (status === 'OK') {
-        console.log('okay sent');
-        $('.order-popup__text').text(mes);
         $('.order-popup').addClass('order-popup_visible');
+        $('.order-popup__text').text('Ваш заказ принят. Приятного аппетита!');
       } else {
-        $('.order-popup__text').text(mes);
         $('.order-popup').addClass('order-popup_visible');
+        $('.order-popup__text').text('Не удалось отправить заказ. Пожалуйста, введите данные снова');
       }
     });
 
     request.fail(function(jqXHR, textStatus) {
-      console.log('fail');
-      $('.order-popup__text').text(mes);
       $('.order-popup').addClass('order-popup_visible');
+      $('.order-popup__text').text('Не удалось отправить заказ. Пожалуйста, введите данные снова');
     });
   }
 
@@ -404,9 +403,9 @@ $(function() {
 
   $('#form-order').on('submit', submitForm);
 
-
+console.log('#form-order');
   $('.order-popup__btn').on('click', e => {
     $('.order-popup').removeClass('order-popup_visible');
   });
-  
+
 });

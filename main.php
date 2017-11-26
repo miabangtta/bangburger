@@ -31,17 +31,14 @@ try {
 
     //Recipients
     $mail->setFrom('testovynoreply@mail.ru', 'Mailer');
-    $mail->addAddress('miabangtta@yandex.ru', 'Joe User');     // Add a recipient
+    $mail->addAddress('testovynoreply@mail.ru', 'Joe User');     // Add a recipient
               // Name is optional
     $mail->addReplyTo('testovynoreply@mail.ru', 'Information');
-
-    //Attachments
-    $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Заказ';
-    $mail->Body    = '
+    $mail->Body = '
     <html>
       <head>
         <title>Заявка</title>
