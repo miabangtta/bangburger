@@ -1,10 +1,10 @@
 <?php
-use phpmailer\PHPMailer;
-use phpmailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-require 'phpmailer/Exception.php';
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
+require 'phpmailer/exception.php';
+require 'phpmailer/phpmailer.php';
+require 'phpmailer/smtp.php';
 
 $name = $_POST['user-name'];
 $phone = $_POST['phone'];
@@ -26,7 +26,7 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'testovynoreply@mail.ru';                 // SMTP username
     $mail->Password = '13580bggg.rU';                           // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
 
     //Recipients
